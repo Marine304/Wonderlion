@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'django_extensions', # runserver_plus
+    'home.apps.HomeConfig',
 ]
 
 MIDDLEWARE = [

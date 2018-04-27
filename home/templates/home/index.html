@@ -1,0 +1,69 @@
+{% extends 'home/base.html' %} {% block content %}
+<div class="container-fluid">
+  
+
+    <section class="line_up" style="margin: 0 auto; width: 100%; height:300px; background-color: tomato;">
+        <p style="font-size: 3rem; color: white; text-align: center;">
+            Lineup Section
+        </p>
+    </section>
+
+    <h1 style="text-align: center;"> 난장 정보 </h1>
+
+    <!-- 주점 모델 생성하기 -->
+    <!-- 주점 정보 card로 표시 -->
+    <!-- 주점 세부사항 detail View 만들기 -->
+    <div class="row">
+        {% for nanjang in nanjang_list %}
+        <div class="col-md-3">
+            <div class="card" style="width: 20rem; margin: 30px 30px 30px 30px;">
+                <img class="card-img-top" src="http://www.unixstickers.com/image/cache/data/stickers/django/django-neg.sh-340x340.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{nanjang.title}}</h5>
+                    <p class="card-text">난장정보</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        난장 세부 사항
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- 난장 정보 -->
+
+</div>
+<!-- 컨테이너 -->
+
+<!-- google map api -->
+<div id="map"></div>
+<script>
+    function initMap() {
+        var uluru = {
+            lat: 35.970557,
+            lng: 126.954681
+        };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDksOeoLGmwSM2vTx8S92IORZi2X7iHeXw&callback=initMap"> </script>
+<!-- bootstrap cdns -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+<script>
+    $('.carousel').carousel({
+        interval: 3000
+    })
+</script> {% endblock %}
