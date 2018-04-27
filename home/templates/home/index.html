@@ -1,69 +1,114 @@
-{% extends 'home/base.html' %} {% block content %}
-<div class="container-fluid">
-  
+{% load static %}
 
-    <section class="line_up" style="margin: 0 auto; width: 100%; height:300px; background-color: tomato;">
-        <p style="font-size: 3rem; color: white; text-align: center;">
-            Lineup Section
-        </p>
-    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
 
-    <h1 style="text-align: center;"> 난장 정보 </h1>
+    <style>
+        * {
+            margin: 0;
+        }
 
-    <!-- 주점 모델 생성하기 -->
-    <!-- 주점 정보 card로 표시 -->
-    <!-- 주점 세부사항 detail View 만들기 -->
-    <div class="row">
-        {% for nanjang in nanjang_list %}
-        <div class="col-md-3">
-            <div class="card" style="width: 20rem; margin: 30px 30px 30px 30px;">
-                <img class="card-img-top" src="http://www.unixstickers.com/image/cache/data/stickers/django/django-neg.sh-340x340.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{nanjang.title}}</h5>
-                    <p class="card-text">난장정보</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        난장 세부 사항
-                    </button>
-                </div>
-            </div>
+        .section.fp-table {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+        .fp-tableCell {
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+        }
+        .section {
+            text-align: center;
+        }
+        #section-1 h1 {
+          font-size: 10em;
+          font-weight: 900;
+          color: #fff;
+        }
+
+        #section-1 h2 {
+            color: rgba(255,255,255,.7);
+            font-size: 1.73em;
+            font-weight: 100;
+            margin: -10px 30px 10px;
+        }
+
+        @media screen and (max-width: 550px){
+            #section-1 h1 {
+                font-size: 3em;
+            }
+
+            #section-1 h2 {
+                font-size: 1.25em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section" id="section-1">
+            <h1>WONDERFUL</h1>
+            <h2>원광대학교 2018년도 축제정보 서비스</h2>
         </div>
-        {% endfor %}
+        <div class="section" id="section-1">
+            <h1>축제 일정</h1>
+            <h2>2018.05.08 ~ 2018.05.10</h2>
+        </div>
+        <div class="section" id="section-1">
+            <h1>라인 업</h1>
+        </div>
+        <div class="section" id="section-1">
+            <h1>난장 정보</h1>
+        </div>
+        <div class="section" id="section-1">
+            <h1>주점 정보</h1>
+        </div>
+        <div class="section" id="section-1">
+            <h1>지도 맵</h1>
+        </div>
     </div>
-    <!-- 난장 정보 -->
 
-</div>
-<!-- 컨테이너 -->
 
-<!-- google map api -->
-<div id="map"></div>
-<script>
-    function initMap() {
-        var uluru = {
-            lat: 35.970557,
-            lng: 126.954681
-        };
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 17,
-            center: uluru
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css"></script>
+
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+                sectionsColor: ['#ff5e45', '#0798ec', '#fc6b7b', '#fec402', '#f6c4e2', '#d2c3f4'],
+                navigationTooltips: ['fullPage', 'Open', 'Easy', 'Touch'],
+                css3: true,
+                scrollingSpeed: 1000,
+                navigation: true,
+                slidesNavigation: true,
+                responsiveHeight: 330,
+                dragAndMove: true,
+                dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
+                controlArrows: false,
+            });
         });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-        });
-    }
-</script>
+    </script>
+</body>
+</html>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDksOeoLGmwSM2vTx8S92IORZi2X7iHeXw&callback=initMap"> </script>
-<!-- bootstrap cdns -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
 
-<script>
-    $('.carousel').carousel({
-        interval: 3000
-    })
-</script> {% endblock %}
+
+
