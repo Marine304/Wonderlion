@@ -6,82 +6,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <title>WONDERFUL</title>
+    
     <!-- bootstrap cdn -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Document</title>
-
-    <style>
-        * {
-            margin: 0;
-        }
-
-        .section.fp-table {
-            display: table;
-            table-layout: fixed;
-            width: 100%;
-        }
-        .fp-tableCell {
-            display: table-cell;
-            vertical-align: middle;
-            width: 100%;
-            height: 100%;
-        }
-        .section {
-            text-align: center;
-        }
-        #section-1 h1 {
-          font-size: 10em;
-          font-weight: 900;
-          color: #fff;
-        }
-
-        #section-1 h2 {
-            color: rgba(255,255,255,.7);
-            font-size: 1.73em;
-            font-weight: 100;
-            margin: -10px 30px 10px;
-        }
-
-        @media screen and (max-width: 550px){
-            #section-1 h1 {
-                font-size: 3em;
-            }
-
-            #section-1 h2 {
-                font-size: 1.25em;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
     <div id="fullpage">
-        <div class="section" id="section-1">
-            <h1>WONDERFUL</h1>
-            <h2>원광대학교 2018년도 축제정보 서비스</h2>
+        <div class="section">
+            <div id="wonderful">
+                <button type="button" class="btn btn-info" id="wonderful_button">
+                    <a href="{% url 'main' %}">상세 페이지</a>
+                </button>
+            </div>
         </div>
-        <div class="section" id="section-1">
+        <div class="section" id="calendar">
             <h1>축제 일정</h1>
             <h2>2018.05.08 ~ 2018.05.10</h2>
         </div>
-        <div class="section" id="section-1">
-            <h1>라인 업</h1>
+        <div class="section" id="lineup">
+            <h1>LINE UP</h1>
         </div>
-        <div class="section" id="section-1">
+        <div class="section" id="section-3">
             <h1>난장 정보</h1>
         </div>
-        <div class="section" id="section-1">
+        <div class="section" id="section-4">
             <h1>주점 정보</h1>
         </div>
-        <div class="section" id="section-1">
+        <div class="section" id="map">
             <h1>지도 맵</h1>
+        </div>
+        <div id="fp-nav" class="right" style="margin-top: -43.5px;">
+            <ul>
+                <li>
+                    <a href="#page1" class="active">
+                        <span></span>
+                    </a>
+                    <div class="fp-tooltip right">fullPage</div>
+                </li>
+                <li>
+                    <a href="#page2">
+                        <span></span>
+                    </a>
+                    <div class="fp-tooltip right">Open</div>
+                </li>
+                <li>
+                    <a href="#page3">
+                        <span></span>
+                    </a>
+                    <div class="fp-tooltip right">Easy</div>
+                </li>
+                <li>
+                    <a href="#page4">
+                        <span></span>
+                    </a>
+                    <div class="fp-tooltip right">Touch</div>
+                </li>
+            </ul>
         </div>
     </div>
 
 
+    <script>
+        function initMap() {
+        
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 19,
+                center: new google.maps.LatLng(35.969285, 126.956408),
+                scrollwheel: false,
+                navigationControl: false,
+                mapTypeControl: false,
+                scaleControl: false,
+                draggable: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var features = [
+                {
+                    position: new google.maps.LatLng(35.969778, 126.956910),
+                    type: 'info',
+                },{
+                    position: new google.maps.LatLng(35.969578, 126.956910),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969378, 126.956910),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969178, 126.956910),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.971178, 126.956910),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969129, 126.956706),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969114, 126.956534),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969067, 126.956080),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969090, 126.956300),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969083, 126.956791),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969070, 126.956675),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969049, 126.956549),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969034, 126.956412),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969025, 126.956263),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969010, 126.956142),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.968998, 126.956042),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.968974, 126.955919),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.968942, 126.955811),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.968917, 126.955729),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.968894, 126.955624),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.968904, 126.955503),
+                    type: 'info',
+                },
+           
+            ];
+
+            features.forEach(function (feature) {
+                var marker = new google.maps.Marker({
+                    position: feature.position,
+                    map: map
+                });
+            });
+        }
+    </script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDksOeoLGmwSM2vTx8S92IORZi2X7iHeXw&callback=initMap"> </script>
+ 
+ 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css"></script>
 
  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -92,16 +175,12 @@
     <script>
         $(document).ready(function () {
             $('#fullpage').fullpage({
+                slidesNavigation: true,
                 anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
                 sectionsColor: ['#ff5e45', '#0798ec', '#fc6b7b', '#fec402', '#f6c4e2', '#d2c3f4'],
-                navigationTooltips: ['fullPage', 'Open', 'Easy', 'Touch'],
                 css3: true,
                 scrollingSpeed: 1000,
-                navigation: true,
-                slidesNavigation: true,
                 responsiveHeight: 330,
-                dragAndMove: true,
-                dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
                 controlArrows: false,
             });
         });

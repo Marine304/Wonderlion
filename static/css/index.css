@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+}
+
+.section.fp-table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.fp-tableCell {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+}
+
+.section {
+    text-align: left;
+}
+
+/* 첫 번쨰 영역 */
+#wonderful {
+    position: fixed;
+    background: url("/static/main.jpg") 50% 0 no-repeat fixed;
+    background-size: 1300px 100%;
+    width: 100%;
+    height: 100%;
+}
+
+#wonderful h1 {
+    margin: 10px 30px 10px;
+    font-size: 8em;
+    font-weight: 900;
+    color: #fff;
+}
+
+#wonderful h2 {
+    color: rgba(255, 255, 255, .7);
+    font-size: 1.73em;
+    font-weight: 100;
+    margin: -10px 50px 10px;
+}
+
+#wonderful_button {
+    margin-left: 50px;
+    margin-top : 30px;
+}
+
+/* 축제 일정 */
+#calendar h1 {
+    margin: 10px 30px 10px;
+    color: #fff;
+    font-size: 8em;
+    font-weight: 900;
+}
+
+#calendar h2 {
+    color: rgba(255, 255, 255, .7);
+    font-size: 1.73em;
+    font-weight: 100;
+    margin: -10px 50px 10px;
+}
+
+/* 라인 업 */
+#lineup {
+  background: url("/static/line_up.jpg") 50% 50% no-repeat;
+  background-size: 1300px 100%;
+  width: 100%;
+  height: 100%;
+}
+
+#lineup h1 {
+  margin: 10px 30px 10px;
+  font-size: 8em;
+  font-weight: 900;
+  color: #fff;
+}
+
+/* 반응형 */
+@media screen and (max-width: 550px) {
+    #wonderful {
+        background: url("/static/main.jpg") 50% 10% no-repeat fixed;
+        background-size: 650px 100%;
+    }
+
+    #wonderful h1 {
+        margin: 10px 30px 10px;
+        font-size: 3em;
+        font-weight: 900;
+        color: #fff;
+    }
+
+    #wonderful h2 {
+        color: rgba(255, 255, 255, .7);
+        font-size: 1.3em;
+        font-weight: 100;
+        margin: -10px 30px 10px;
+    }
+
+    #wonderful_button {
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+}

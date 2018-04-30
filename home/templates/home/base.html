@@ -1,80 +1,49 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>대동제 서비스</title>
+    <title>WONDERFUL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- fullpage js -->
-    
-    
+        
     <!-- bootstrap cdn -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-
-  
-    
-    <style>
-        * {
-            padding: 0;
-        }
-
-        body {
-            margin-top: 56px;
-
-        }
-
-        #map {
-            width: 100%;
-            height: 400px;
-            background-color: grey;
-        }
-
-        .section {
-            text-align:center;
-            font-size: 3em;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
 </head>
 
 <body>
-
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">WONDERFUL - 축제정보 서비스</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <!-- 활성화 상태 -->
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">축제정보</a>
+                    <a class="nav-link" href="#">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">주점정보</a>
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
             </ul>
         </div>
     </nav>
-
+    
     {% block content %} {% endblock %}
-
-
-    <footer style="height: 300px; width: 100%; background-color: blue;">
-        <p style="text-align:center; color: white; font-size: 3rem;">
-            Footer section
-        </p>
-    </footer>
-
 </body>
 
 </html>
