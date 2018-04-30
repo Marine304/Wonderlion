@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     
+    <script src="{% static 'js/index.js' %}"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
@@ -36,10 +37,11 @@
         <div class="section">
             <div id="wonderful">
                 <div class="wonderful_nav">
-                    <a href="{% url 'home:main' %}">WONDERFUL</a>
+                    <a id='main_nav' href="{% url 'home:main' %}">WONDERFUL</a>
                 </div>
             </div>
         </div>
+        
         <div class="section" id="calendar">
             <h1>축제 일정</h1>
             <h2>2018.05.08 ~ 2018.05.10</h2>
@@ -74,6 +76,7 @@
         </div>
         <div class="section" id="map"></div>
     </div>
+    
 
 
     <script>

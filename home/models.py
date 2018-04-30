@@ -5,7 +5,7 @@ class Nanjang(models.Model):
 
     title = models.CharField(max_length = 20)
     content = models.TextField(blank=True, null=True)
-    menu = models.ImageField(null=True, blank=True)
+    menu = models.ImageField(null=True, blank=True,upload_to='home/%Y/%m/%d')
     tags = TaggableManager()
 
     def __str__(self):
@@ -15,7 +15,7 @@ class Jujum(models.Model):
 
     title = models.CharField(max_length = 20)
     content = models.TextField(blank=True, null=True)
-    menu = models.ImageField(null=True, blank=True)
+    menu = models.ImageField(null=True, blank=True, upload_to='home/%Y/%m/%d')
     tags = TaggableManager()
 
     def __str__(self):

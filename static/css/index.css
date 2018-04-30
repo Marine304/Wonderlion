@@ -32,21 +32,22 @@ h2 {
 /* 첫 번쨰 영역 */
 #wonderful {
     position: relative;
-    background: url("/static/main.jpg") 50% 50% no-repeat fixed;
+    background: url("/static/image/main.jpg") 50% 50% no-repeat fixed;
     background-size: 100% 100%;
     width: 100%;
     height: 100%;
 }
 
-.mainnav {
+.wonderful_nav {
     text-align: right;
+    padding: 30px;
 }
 
-.mainnav > a {
-    text-decoration: none;
+.wonderful_nav > a {
     color: white;
-    font-size: 4em;
-    font-weight: 900;
+    font-size: 2em;
+    font-weight: 300;
+    text-decoration: none;
 }
 
 /* 축제 일정 */
@@ -64,7 +65,7 @@ h2 {
 /* 반응형 */
 @media screen and (max-width: 550px) {
     #wonderful {
-        background: url("/static/main.jpg") 50% 10% no-repeat fixed;
+        background: url("/static/image/main.jpg") 50% 10% no-repeat fixed;
         background-size: 650px 100%;
     }
 

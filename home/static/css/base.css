@@ -16,3 +16,70 @@
 .jujum-card {
     margin-top: 30px;
 }
+
+/* navigation */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* main section */
+.main_section {
+    margin: 0 auto;
+    width: 300px;
+    padding: 20px;
+}
+
+.main_section > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation:spin 10s linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* 축제 일정 */
+#calendar {
+
+}
+
+#calendar > div, #lineup > div {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* 라인 업 */
+#lineup > div > h3 {
+    font-weight: 800;
+}
+
+/* 난장 및 주점 디테일 */
+.nanjang_image > img, .jujum_image > img {
+    border-radius: 8px;
+}
+
+.nanjang_image, .nanjang_content, .jujum_image, .jujum_content {
+    margin-top: 50px;
+}
+
+.detail_nav {
+    margin-top: 30px;
+}
