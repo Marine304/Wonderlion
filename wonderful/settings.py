@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 
     'django_extensions', # runserver_plus
     'home.apps.HomeConfig',
+    'taggit', # tag
 ]
 
 MIDDLEWARE = [

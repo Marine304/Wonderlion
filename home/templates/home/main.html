@@ -1,3 +1,82 @@
 {% extends 'home/base.html' %}
 
 {% load staticfiles %}
+
+{% block content %}
+<div class="container">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">주점 정보</li>
+        </ol>
+    </nav>
+
+    {% for jujum in jujum_list %}
+    <div class="card text-left jujum-card">
+        <div class="card-header">
+            {{ jujum.title }}
+            <span class="badge badge-secondary">New</span>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title"> {{ jujum.title }}</h5>
+            <p class="card-text"> 
+                {{ jujum.content }} 
+                <a href="{% url 'home:main-jujum' jujum.pk %}">상세페이지</a>
+            </p>
+            <ul>
+                {% for tag in jujum.tags.all %}
+                    <li style="display:inline-block;"> #{{ tag }} </li>
+                {% endfor %}
+            </ul>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+    {% endfor %}
+
+   <div class="row" id="calendar">
+       <h1>축제 일정</h1>
+       <div class="col-md-4"></div>
+       <div class="col-md-4"></div>
+       <div class="col-md-4"></div>
+   </div>
+   <div class="row">
+       <h1 id="lineup">라인 업</h1>
+       <div class="col-md-4"></div>
+       <div class="col-md-4"></div>
+       <div class="col-md-4"></div>
+   </div>
+
+   <div class="row">
+       <h1>난장 정보</h1><br>
+       <div class="col-md-4">
+           {% for item in object_list %}
+                <h1> title: {{ item.title }}</h1>
+            {% endfor %}
+        </div>
+       <div class="col-md-4"></div>
+       <div class="col-md-4"></div>
+   </div>
+   <div class="row">
+        {% for jujum in jujum_list %}
+            <div class="col-md-6">
+                <h5> {{ jujum.title }} </h5>
+            </div>
+            <div class="col-md-3">
+                <p> {{ jujum.content }} </p>
+            </div>
+            <div class="col-md-3">
+                <p> 주점 이미지</p>
+            </div>
+        {% endfor %}
+   </div>
+   <div class="row">
+       <div class="col-md-4"></div>
+       <div class="col-md-4"></div>
+       <div class="col-md-4"></div>
+   </div>
+</div>
+
+{% endblock %}

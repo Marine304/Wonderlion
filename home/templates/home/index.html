@@ -11,14 +11,33 @@
     <!-- bootstrap cdn -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+                sectionsColor: ['#ff5e45', '#0798ec', '#fc6b7b', '#fec402', '#f6c4e2', '#d2c3f4'],
+                navigation: true,
+                navigationTooltips: ['WONDERFUL', '축제 일정', 'LINE UP', '난장', '주점', 'MAP'],
+            });
+        });
+    </script>
 </head>
 <body>
     <div id="fullpage">
         <div class="section">
             <div id="wonderful">
-                <button type="button" class="btn btn-info" id="wonderful_button">
-                    <a href="{% url 'main' %}">상세 페이지</a>
-                </button>
+                <div class="wonderful_nav">
+                    <a href="{% url 'home:main' %}">WONDERFUL</a>
+                </div>
             </div>
         </div>
         <div class="section" id="calendar">
@@ -26,7 +45,26 @@
             <h2>2018.05.08 ~ 2018.05.10</h2>
         </div>
         <div class="section" id="lineup">
-            <h1>LINE UP</h1>
+            <div class="slide">
+                <div class="intro">
+                    <h1>라인 업 리스트</h1>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <h1>5월 8일</h1>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <h1>5월 9일</h1>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <h1>5월 10일</h1>
+                </div>
+            </div>
         </div>
         <div class="section" id="section-3">
             <h1>난장 정보</h1>
@@ -34,37 +72,7 @@
         <div class="section" id="section-4">
             <h1>주점 정보</h1>
         </div>
-        <div class="section" id="map">
-            <h1>지도 맵</h1>
-        </div>
-        <div id="fp-nav" class="right" style="margin-top: -43.5px;">
-            <ul>
-                <li>
-                    <a href="#page1" class="active">
-                        <span></span>
-                    </a>
-                    <div class="fp-tooltip right">fullPage</div>
-                </li>
-                <li>
-                    <a href="#page2">
-                        <span></span>
-                    </a>
-                    <div class="fp-tooltip right">Open</div>
-                </li>
-                <li>
-                    <a href="#page3">
-                        <span></span>
-                    </a>
-                    <div class="fp-tooltip right">Easy</div>
-                </li>
-                <li>
-                    <a href="#page4">
-                        <span></span>
-                    </a>
-                    <div class="fp-tooltip right">Touch</div>
-                </li>
-            </ul>
-        </div>
+        <div class="section" id="map"></div>
     </div>
 
 
@@ -160,31 +168,6 @@
     </script>
     
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDksOeoLGmwSM2vTx8S92IORZi2X7iHeXw&callback=initMap"> </script>
- 
- 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css"></script>
-
- 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('#fullpage').fullpage({
-                slidesNavigation: true,
-                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
-                sectionsColor: ['#ff5e45', '#0798ec', '#fc6b7b', '#fec402', '#f6c4e2', '#d2c3f4'],
-                css3: true,
-                scrollingSpeed: 1000,
-                responsiveHeight: 330,
-                controlArrows: false,
-            });
-        });
-    </script>
 </body>
 </html>
 
