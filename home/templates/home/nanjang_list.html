@@ -1,0 +1,24 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" id="nanjang_info" aria-current="page">난장 정보</li>
+    </ol>
+</nav>
+
+<div class="row">
+    {% for nanjang in object_list %}
+    <div class="col-md-4">
+        <div class="card" style="width: 22rem; margin: 10px;">
+            {% if nanjang.menu %}
+            <img class="card-img-top" src="{{ nanjang.menu.url }}"> 
+            {% else %}
+            <img class="card-img-top" src="/static/image/main.jpg"> 
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ nanjang.title }}</h5>
+                <p class="card-text"> {{ nanjang.content }} </p>
+                <a href="{% url 'home:main-nanjang' nanjang.pk %}" class="btn btn-primary">상세 페이지</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
