@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'django_extensions', # runserver_plus
-    'home.apps.HomeConfig',
+    'home.apps.HomeConfig', # 메인 앱
+    'nanjang.apps.NanjangConfig', # 주점 앱
+    'jujum.apps.JujumConfig', # 난장 앱
     'taggit', # tag
 ]
 

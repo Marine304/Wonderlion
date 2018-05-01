@@ -26,7 +26,7 @@ h2 {
   color: rgba(255, 255, 255, .7);
   font-size: 1.73em;
   font-weight: 100;
-  margin: -10px 50px 10px;
+  margin: 20px 40px 10px;
 }
 
 /* 첫 번쨰 영역 */
@@ -51,6 +51,14 @@ h2 {
 }
 
 /* 축제 일정 */
+#calendar {
+
+}
+
+#calendar > img {
+    position: relative;
+    vertical-align: middle;    
+}
 
 /* 라인 업 */
 #lineup {

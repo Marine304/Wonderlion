@@ -25,7 +25,7 @@
         $(document).ready(function () {
             $('#fullpage').fullpage({
                 anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
-                sectionsColor: ['rgba(0, 2, 45, 1)', '#0798ec', 'rgba(0, 2, 45, 1)', '#fec402', '#f6c4e2', '#d2c3f4'],
+                sectionsColor: ['rgba(0, 2, 45, 1)', 'rgba(0, 2, 45, 1)', 'rgba(0, 2, 45, 1)', '#fec402', '#f6c4e2', '#d2c3f4'],
                 navigation: true,
                 navigationTooltips: ['WONDERFUL', '축제 일정', 'LINE UP', '난장', '주점', 'MAP'],
             });
@@ -43,11 +43,49 @@
         </div>
         
         <div class="section" id="calendar">
-            <h1>축제 일정</h1>
-            <h2>2018.05.08 ~ 2018.05.10</h2>
-        </div>
-        <div class="section">
+            <div class="slide" id="first">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <img src="{% static 'image/calendar.jpeg' %}" width=400>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
 
+            <div class="slide" id="second">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <img src="{% static 'image/golden_bell.jpeg' %}" width=400>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+
+            <div class="slide" id="third">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <img src="{% static 'image/festival_1.jpeg' %}" width=400>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+
+            <div class="slide" id="forth">
+                <div class="row">
+                    <div class="col-md-4"></div>                    
+                    <div class="col-md-4">
+                        <img src="{% static 'image/festival_2.jpeg' %}" width=400>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+          
+        </div>
+        
+        <div class="section">
             <div class="slide" id="lineup">
                 <div class="intro"></div>
             </div>
@@ -60,9 +98,9 @@
             </div>
             <div class="slide" id="lineup_3">
                 <div class="intro"></div>
-            </div>
-           
+            </div>   
         </div>
+        
         <div class="section" id="section-3">
             <h1>난장 정보</h1>
         </div>
@@ -75,24 +113,25 @@
 
 
     <script>
-        function initMap() {
-        
+       function initMap() {
+            var wku = { lat: 35.969285, lng: 126.956408 }
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 19,
-                center: new google.maps.LatLng(35.969285, 126.956408),
+                zoom: 18,
+                center: wku,
                 scrollwheel: false,
                 navigationControl: false,
                 mapTypeControl: false,
                 scaleControl: false,
-                draggable: false,
+                draggable: true,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
 
-            var features = [
+            var jujums = [
+                // 수덕호 오른쪽 길 건너편
                 {
                     position: new google.maps.LatLng(35.969778, 126.956910),
                     type: 'info',
-                },{
+                }, {
                     position: new google.maps.LatLng(35.969578, 126.956910),
                     type: 'info',
                 }, {
@@ -101,10 +140,25 @@
                 }, {
                     position: new google.maps.LatLng(35.969178, 126.956910),
                     type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.971178, 126.956910),
+                },
+                // 수덕호 오른쪽 
+                {
+                    position: new google.maps.LatLng(35.969778, 126.956798),
                     type: 'info',
                 }, {
+                    position: new google.maps.LatLng(35.969578, 126.956798),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969378, 126.956798),
+                    type: 'info',
+                }, {
+                    position: new google.maps.LatLng(35.969178, 126.956798),
+                    type: 'info',
+                },
+            ];
+
+            var nanjangs = [
+                {
                     position: new google.maps.LatLng(35.969129, 126.956706),
                     type: 'info',
                 }, {
@@ -116,50 +170,44 @@
                 }, {
                     position: new google.maps.LatLng(35.969090, 126.956300),
                     type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969083, 126.956791),
+                },
+
+                // 수덕호 아래 건너편
+                {
+                    position: new google.maps.LatLng(35.969049, 126.956706),
                     type: 'info',
                 }, {
-                    position: new google.maps.LatLng(35.969070, 126.956675),
+                    position: new google.maps.LatLng(35.969039, 126.956534),
                     type: 'info',
                 }, {
-                    position: new google.maps.LatLng(35.969049, 126.956549),
+                    position: new google.maps.LatLng(35.969009, 126.956300),
                     type: 'info',
                 }, {
-                    position: new google.maps.LatLng(35.969034, 126.956412),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969025, 126.956263),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969010, 126.956142),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.968998, 126.956042),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.968974, 126.955919),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.968942, 126.955811),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.968917, 126.955729),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.968894, 126.955624),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.968904, 126.955503),
+                    position: new google.maps.LatLng(35.968989, 126.956080),
                     type: 'info',
                 },
-           
-            ];
+            ]
 
-            features.forEach(function (feature) {
+            var JujumList = ['주점1', '주점2', '주점3', '주점4', '주점5', '주점6', '주점7', '주점8'];
+            var NanjangList = ['난장1', '난장2', '난장3', '난장4', '난장5', '난장6', '난장7', '난장8'];
+            var JujumCount = 0;
+            var NanjangCount = 0;
+
+            jujums.forEach(function (jujum) {
                 var marker = new google.maps.Marker({
-                    position: feature.position,
-                    map: map
+                    position: jujum.position,
+                    map: map,
+                    label: JujumList[JujumCount++],
+                    title: "주점",
+                });
+            });
+
+            nanjangs.forEach(function (nanjang) {
+                var marker = new google.maps.Marker({
+                    position: nanjang.position,
+                    map: map,
+                    label: NanjangList[NanjangCount++],
+                    title: "난장",
                 });
             });
         }

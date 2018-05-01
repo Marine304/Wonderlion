@@ -1,3 +1,6 @@
+{% load staticfiles %}
+{% load staticfiles %}
+
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item active" id="lineup_info" aria-current="page">라인 업</li>
@@ -12,7 +15,8 @@
         </div>
         <div class="col-md-4">
             <h3>5월 9일</h3>
-            <img class="img-fluid" src="/static/image/line_up_2.jpg" style="width: 100%; height: 360px; border-radius: 10px;">
+            <img class="img-fluid" src="/static/image/line_up_2.jpg" style="margin-bottom: 10px; width: 100%; height: 360px; border-radius: 10px;">
+            <img class="img-fluid" src="{% static 'image/ybj.jpg' %}" style="margin-bottom: 10px; width: 100%; height: 360px; border-radius: 10px;">
             <p> 유병재(토크 콘서트), 헤이즈 </p>
         </div>
         <div class="col-md-4">

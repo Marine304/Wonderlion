@@ -7,6 +7,8 @@ from home.views import IndexView
 urlpatterns = [
     path('', IndexView.as_view(), name='index'), 
     path('home/', include('home.urls', namespace="home")),
+    path('nanjang/', include('nanjang.urls', namespace="nanjang")),
+    path('jujum/', include('jujum.urls', namespace="jujum")),
     path('admin/', admin.site.urls),
 ]
 

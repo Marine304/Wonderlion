@@ -3,15 +3,22 @@
 {% load staticfiles %}
 
 {% block content %}
+
     <div class="container main">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="img-fluid banner" src="{% static 'image/banner.jpg' %}" >
+            </div>
+        </div>
+
         <!-- 축제 일정 -->  
         {% include 'home/calendar.html' %}
         <!-- 라인 업-->
         {% include 'home/lineup.html' %}
-        <!-- 주점 목록 -->
-        {% include 'home/jujum_list.html' %}
         <!-- 난장 목록 -->
-        {% include 'home/nanjang_list.html' %}
+        {% include 'nanjang/nanjang_list.html' %}
+        <!-- 주점 목록 -->
+        {% include 'jujum/jujum_list.html' %}
         <!-- 난장 위치, 주점 위치 -->
         {% include 'home/map.html' %}
     </div>

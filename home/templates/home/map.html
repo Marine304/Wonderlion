@@ -1,6 +1,6 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item active" id="nanjang_info" aria-current="page">위치 정보</li>
+        <li class="breadcrumb-item active" id="map_info" aria-current="page">위치 정보</li>
     </ol>
 </nav>
 
@@ -8,19 +8,20 @@
 
 <script>
     function initMap() {
-
+        var wku = { lat: 35.969285, lng: 126.956408 }
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 19,
-            center: new google.maps.LatLng(35.969285, 126.956408),
+            zoom: 18,
+            center: wku,
             scrollwheel: false,
             navigationControl: false,
             mapTypeControl: false,
             scaleControl: false,
-            draggable: false,
+            draggable: true,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
-        var features = [
+        var jujums = [
+            // 수덕호 오른쪽 길 건너편
             {
                 position: new google.maps.LatLng(35.969778, 126.956910),
                 type: 'info',
@@ -33,10 +34,25 @@
             }, {
                 position: new google.maps.LatLng(35.969178, 126.956910),
                 type: 'info',
-            }, {
-                position: new google.maps.LatLng(35.971178, 126.956910),
+            },  
+            // 수덕호 오른쪽 
+            {
+                position: new google.maps.LatLng(35.969778, 126.956798),
                 type: 'info',
             }, {
+                position: new google.maps.LatLng(35.969578, 126.956798),
+                type: 'info',
+            }, {
+                position: new google.maps.LatLng(35.969378, 126.956798),
+                type: 'info',
+            }, {
+                position: new google.maps.LatLng(35.969178, 126.956798),
+                type: 'info',
+            }, 
+        ];
+
+        var nanjangs = [
+             {
                 position: new google.maps.LatLng(35.969129, 126.956706),
                 type: 'info',
             }, {
@@ -48,50 +64,44 @@
             }, {
                 position: new google.maps.LatLng(35.969090, 126.956300),
                 type: 'info',
-            }, {
-                position: new google.maps.LatLng(35.969083, 126.956791),
+            }, 
+            
+            // 수덕호 아래 건너편
+            {
+                position: new google.maps.LatLng(35.969049, 126.956706),
                 type: 'info',
             }, {
-                position: new google.maps.LatLng(35.969070, 126.956675),
+                position: new google.maps.LatLng(35.969039, 126.956534),
                 type: 'info',
             }, {
-                position: new google.maps.LatLng(35.969049, 126.956549),
+                position: new google.maps.LatLng(35.969009, 126.956300),
                 type: 'info',
             }, {
-                position: new google.maps.LatLng(35.969034, 126.956412),
+                position: new google.maps.LatLng(35.968989, 126.956080),
                 type: 'info',
-            }, {
-                position: new google.maps.LatLng(35.969025, 126.956263),
-                type: 'info',
-            }, {
-                position: new google.maps.LatLng(35.969010, 126.956142),
-                type: 'info',
-            }, {
-                position: new google.maps.LatLng(35.968998, 126.956042),
-                type: 'info',
-            }, {
-                position: new google.maps.LatLng(35.968974, 126.955919),
-                type: 'info',
-            }, {
-                position: new google.maps.LatLng(35.968942, 126.955811),
-                type: 'info',
-            }, {
-                position: new google.maps.LatLng(35.968917, 126.955729),
-                type: 'info',
-            }, {
-                position: new google.maps.LatLng(35.968894, 126.955624),
-                type: 'info',
-            }, {
-                position: new google.maps.LatLng(35.968904, 126.955503),
-                type: 'info',
-            },
+            }, 
+        ]
 
-        ];
+        var JujumList = ['주점1', '주점2', '주점3', '주점4', '주점5', '주점6', '주점7', '주점8'];
+        var NanjangList = ['난장1', '난장2', '난장3', '난장4', '난장5', '난장6', '난장7', '난장8'];
+        var JujumCount = 0;
+        var NanjangCount = 0;
 
-        features.forEach(function (feature) {
+        jujums.forEach(function (jujum) {
             var marker = new google.maps.Marker({
-                position: feature.position,
-                map: map
+                position: jujum.position,
+                map: map,
+                label: JujumList[JujumCount++],
+                title: "주점",
+            });
+        });
+
+        nanjangs.forEach(function (nanjang) {
+            var marker = new google.maps.Marker({
+                position: nanjang.position,
+                map: map,
+                label: NanjangList[NanjangCount++],
+                title: "난장",
             });
         });
     }

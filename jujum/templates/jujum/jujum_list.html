@@ -8,19 +8,25 @@
     {% for jujum in jujum_list %}
     <div class="col-md-4">
         <div class="card" style="width: 22rem; margin: 10px;">
+            {% if jujum.menu %}
+            <img class="card-img-top" src="{{ jujum.menu.url }}">
+            {% else %}
             <img class="card-img-top" src="/static/image/main.jpg">
+            {% endif %}
+
             <div class="card-body">
                 <h5 class="card-title">
                     {{ jujum.title }}
                     <span class="badge badge-secondary">New</span>
+                    <span class="badge badge-danger">Danger</span>
                 </h5>
 
-                <p class="card-text"> {{ jujum.content }} </p>
+                <p class="card-text content"> {{ jujum.content }} </p>
                 {% for tag in jujum.tags.all %}
-                <li style="display:inline;"> #{{ tag }} </li>
+                    <li style="display:inline;"> #{{ tag }} </li>
                 {% endfor %}
                 <br />
-                <a href="{% url 'home:main-jujum' jujum.pk %}" class="btn btn-primary">상세 페이지</a>
+                <a href="{% url 'jujum:detail' jujum.pk %}" class="btn btn-primary">상세 페이지</a>
             </div>
         </div>
     </div>

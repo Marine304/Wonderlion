@@ -26,6 +26,10 @@
     margin-bottom: 20px;
 }
 
+.banner {
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
 
 /* 축제 일정 */
 #calendar {
@@ -58,4 +62,15 @@
 
 .comment {
     margin-top: 50px;
+}
+
+.card-body > .card-text {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-wrap:break-word;
+    line-height: 1.2em;
+    height: 3.6em;
+    overflow: hidden;
 }

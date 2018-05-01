@@ -1,0 +1,34 @@
+{% block nanjang_list %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" id="nanjang_info" aria-current="page">난장 정보</li>
+    </ol>
+</nav>
+
+<div class="row">
+    {% for nanjang in nanjang_list %}
+    <div class="col-md-4">
+        <div class="card" style="width: 22rem; margin: 10px;">
+            {% if nanjang.menu %}
+            <img class="card-img-top" src="{{ nanjang.menu.url }}"> 
+            {% else %}
+            <img class="card-img-top" src="/static/image/main.jpg"> 
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{ nanjang.title }}
+                    <span class="badge badge-secondary">New</span>
+                    <span class="badge badge-danger">Danger</span>
+                </h5>
+                <p class="card-text content"> {{ nanjang.content }} </p>
+                {% for tag in jujum.tags.all %}
+                    <li style="display:inline;"> #{{ tag }} </li>
+                {% endfor %}
+                <br />
+                <a href="{% url 'nanjang:detail' nanjang.pk %}" class="btn btn-primary">상세 페이지</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
