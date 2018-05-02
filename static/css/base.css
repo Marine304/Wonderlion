@@ -13,8 +13,8 @@
     font-size: 3em;
 }
 
-.jujum-card {
-    margin-top: 30px;
+.main {
+    margin-top: 80px;
 }
 
 /* navigation */
@@ -22,37 +22,9 @@
     margin-bottom: 20px;
 }
 
-/* main section */
-.main_section {
-    margin: 0 auto;
-    width: 300px;
-    padding: 20px;
-}
-
-.main_section > img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    animation:spin 10s linear infinite;
-}
-
-@-moz-keyframes spin {
-    100% {
-        -moz-transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+.banner {
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 /* 축제 일정 */
@@ -71,12 +43,34 @@
     font-weight: 800;
 }
 
-/* 난장 디테일 */
-.nanjang_image > img {
+/* 난장 및 주점 디테일 */
+.nanjang_image > img, .jujum_image > img {
     border-radius: 8px;
 }
 
-.nanjang_image, .nanjang_content {
+.nanjang_image, .nanjang_content, .jujum_image, .jujum_content {
     margin-top: 50px;
 }
-    
+
+.detail_nav {
+    margin-top: 30px;
+}
+
+.comment {
+    margin-top: 50px;
+}
+
+.card-body > .card-text {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-wrap:break-word;
+    line-height: 1.2em;
+    height: 3.6em;
+    overflow: hidden;
+}
+
+.jujum-card {
+    height: 480px;
+}
