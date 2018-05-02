@@ -7,5 +7,5 @@ urlpatterns = [
     # GEt '/jujum/'
     
     # GET '/jujum/99/
-    path('/<int:pk>/', views.JujumDetailView.as_view(), name='detail'),
+    path('<int:pk>/', views.JujumDetailView.as_view(), name='detail'),
 ]
