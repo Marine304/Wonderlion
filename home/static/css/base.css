@@ -27,6 +27,56 @@
     margin-bottom: 30px;
 }
 
+.nav-logo {
+    font-size: 1.7em;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+    animation: swinging 3.5s ease-in-out forwards infinite;
+
+}
+
+.nav-logo > p {
+    color: #cabaf2;
+    font-weight: 800;
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #cabaf2,
+    0 0 30px #cabaf2,
+    0 0 40px #cabaf2,
+    0 0 55px #cabaf2,
+    0 0 75px #cabaf2;
+}
+
+
+@-webkit-keyframes swinging {
+    0% {
+        -webkit-transform: rotate(10deg);
+    }
+    50% {
+        -webkit-transform: rotate(-5deg)
+    }
+    100% {
+        -webkit-transform: rotate(10deg);
+    }
+}
+
+@keyframes swinging {
+    0% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-5deg)
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+.nav-text {
+    font-size: 1.1em;
+}
+
 /* 축제 일정 */
 #calendar {
 

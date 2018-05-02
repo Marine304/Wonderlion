@@ -3,6 +3,9 @@ from django.views import generic
 from jujum.models import  Jujum
 import json
 
+class JujumListView(generic.ListView):
+    model = Jujum
+    
 class JujumDetailView(generic.DetailView):
     model = Jujum
 
