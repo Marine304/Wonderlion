@@ -12,7 +12,7 @@
             {% if nanjang.menu %}
             <img class="card-img-top" src="{{ nanjang.menu.url }}"> 
             {% else %}
-            <img class="card-img-top" src="/static/image/main.jpg"> 
+            <img class="card-img-top" src="/static/image/default.jpg"> 
             {% endif %}
             <div class="card-body">
                 <h5 class="card-title">
@@ -25,7 +25,7 @@
                     <li style="display:inline;"> #{{ tag }} </li>
                 {% endfor %}
                 <br />
-                <a href="{% url 'nanjang:detail' nanjang.pk %}" class="btn btn-primary">상세 페이지</a>
+                <a href="{% url 'nanjang:detail' nanjang.pk %}" class="btn btn-light">more</a>
             </div>
         </div>
     </div>

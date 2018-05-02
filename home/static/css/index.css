@@ -62,19 +62,19 @@ h2 {
 
 /* 라인 업 */
 #lineup {
-  background: url("/static/image/line_up.jpg") 50% 50% no-repeat;
+  background: url("/static/image/line_up.jpeg") 50% 50% no-repeat;
 }
 
 #lineup_1 {
-    background: url("/static/image/line_up_1.jpg") 50% 50% no-repeat;
+    background: url("/static/image/line_up_1.jpeg") 50% 50% no-repeat;
 }
 
 #lineup_2 {
-    background: url("/static/image/line_up_2.jpg") 50% 50% no-repeat;
+    background: url("/static/image/line_up_2.jpeg") 50% 50% no-repeat;
 }
 
 #lineup_3 {
-    background: url("/static/image/line_up_3.jpg") 50% 50% no-repeat;
+    background: url("/static/image/line_up_3.jpeg") 50% 50% no-repeat;
 }
 
 #lineup, #lineup_1, #lineup_2, #lineup_3 {
@@ -390,19 +390,19 @@ html.fp-enabled,
     }
 
     #lineup {
-        background: url("/static/image/line_up.jpg") 50% 50% no-repeat;
+        background: url("/static/image/line_up.jpeg") 50% 50% no-repeat;
     }
 
     #lineup_1 {
-        background: url("/static/image/line_up_1.jpg") 50% 50% no-repeat;
+        background: url("/static/image/line_up_1.jpeg") 50% 50% no-repeat;
     }
 
     #lineup_2 {
-        background: url("/static/image/line_up_2.jpg") 50% 50% no-repeat;
+        background: url("/static/image/line_up_2.jpeg") 50% 50% no-repeat;
     }
 
     #lineup_3 {
-        background: url("/static/image/line_up_3.jpg") 50% 50% no-repeat;
+        background: url("/static/image/line_up_3.jpeg") 50% 50% no-repeat;
     }
 
     #lineup,
@@ -416,19 +416,19 @@ html.fp-enabled,
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
     #lineup {
-        background: url("/static/image/line_up.jpg") 50% 50% no-repeat;
+        background: url("/static/image/line_up.jpeg") 50% 50% no-repeat;
     }
 
     #lineup_1 {
-        background: url("/static/image/line_up_1.jpg") 50% 50% no-repeat;
+        background: url("/static/image/line_up_1.jpeg") 50% 50% no-repeat;
     }
 
     #lineup_2 {
-        background: url("/static/image/line_up_2.jpg") 50% 50% no-repeat;
+        background: url("/static/image/line_up_2.jpeg") 50% 50% no-repeat;
     }
 
     #lineup_3 {
-        background: url("/static/image/line_up_3.jpg") 50% 50% no-repeat;
+        background: url("/static/image/line_up_3.jpeg") 50% 50% no-repeat;
     }
 
     #lineup,
@@ -443,19 +443,19 @@ html.fp-enabled,
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     #lineup {
-        background: url("/static/image/line_up.jpg") 50% 50% no-repeat;
+        background: url("/static/image/line_up.jpeg") 50% 50% no-repeat;
     }
 
     #lineup_1 {
-        background: url("/static/image/line_up_1.jpg") 50% 50% no-repeat;
+        background: url("/static/image/line_up_1.jpeg") 50% 50% no-repeat;
     }
 
     #lineup_2 {
-        background: url("/static/image/line_up_2.jpg") 50% 50% no-repeat;
+        background: url("/static/image/line_up_2.jpeg") 50% 50% no-repeat;
     }
 
     #lineup_3 {
-        background: url("/static/image/line_up_3.jpg") 50% 50% no-repeat;
+        background: url("/static/image/line_up_3.jpeg") 50% 50% no-repeat;
     }
 
     #lineup,
