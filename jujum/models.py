@@ -7,6 +7,7 @@ class Jujum(models.Model):
     content = models.TextField(blank=True, null=True)
     menu = models.ImageField(null=True, blank=True, upload_to='home/%Y/%m/%d')
     tags = TaggableManager()
-
+    like_count = models.IntegerField(default=0)
+    
     def __str__(self):
         return self.title

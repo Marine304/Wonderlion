@@ -21,14 +21,34 @@
             {% endfor %}
 
             <div class="like_section">
-                <!-- 좋아요 누르기 전 -->
-                <i class="far fa-heart fa-lg"></i>
-                <!-- 좋아요 누른 후-->
-                <i class="fas fa-heart fa-lg"></i>
+                <p id="count_like-{{ object.id }}">{{ object.like_count }}개</p>
+                
+                <i class="like far fa-heart fa-lg"></i>
             </div>
         </div>
 
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(".like").click(function () {
+            var pk = '{{ jujum.pk }}'
+            $.ajax({ 
+                type: "POST", 
+                url: "{% url 'jujum:like' jujum.pk %}", 
+                data: { 'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}' }, 
+                dataType: "json", 
+
+                success: function (response) { 
+                    $('.far').toggleClass('fas');
+                    $("#count_like-"+pk).html(response.like_count + "개");
+                },
+                error: function (request, status, error) { 
+                    window.location.replace("/home/")
+                },
+            });
+        })
+    </script>
 
     <div class="comment">
         {% include 'home/comment.html' %}
