@@ -1,12 +1,12 @@
 {% block nanjang_list %}
+{% load staticfiles %}
 
 <div class="dummy dummy_margin" id="nanjang_info"></div>
 
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">난장 정보</li>
-    </ol>
-</nav>
+<div class="category">
+    <img src="{% static '/image/nanjang.jpg' %}"style="width :380px; height: 57px">
+</div>
+
 
 <div class="row">
     {% for nanjang in nanjang_list %}

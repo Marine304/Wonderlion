@@ -1,11 +1,8 @@
+{% load staticfiles %}
 <div class="dummy dummy_margin" id="jujum_info"></div>
-
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">주점 정보</li>
-    </ol>
-</nav>
-
+<div class="category">
+    <img src="{% static '/image/jujum.jpg' %}"style="width :380px; height: 57px">
+</div>
 
 <div class="row">
     {% for jujum in jujum_list %}
