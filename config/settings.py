@@ -28,9 +28,7 @@ SECRET_KEY = 'ehcy@e-$1wv%k!!4*crsd_a-h@pb!j=csp^8gbne!-8+y@fcfh'
 DEBUG = True
 
 
-
-
-ALLOWED_HOSTS = ['www.localhost', '*']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -59,7 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'wonderful.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
@@ -77,7 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'wonderful.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
