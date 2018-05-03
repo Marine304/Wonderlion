@@ -5,12 +5,9 @@
 {% block content %}
 
     <div class="container main">
-        <div class="row">
-            <div class="col-md-12">
-                <img class="img-fluid banner" src="{% static 'image/banner.jpg' %}" >
-            </div>
-        </div>
 
+        <!-- 배너 -->
+        {% include 'home/banner.html' %}        
         <!-- 축제 일정 -->  
         {% include 'home/calendar.html' %}
         <!-- 라인 업-->
