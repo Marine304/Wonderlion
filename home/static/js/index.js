@@ -13,5 +13,5 @@ window.onload = function() {
 }
 
 function movePage(target) {
-    window.location.href = "http://localhost:8000/home/main/#" + target;
+    window.location.href = "http://wonderful.ap-northeast-2.elasticbeanstalk.com/home/main/#" + target;
 }
