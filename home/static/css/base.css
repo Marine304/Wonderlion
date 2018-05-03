@@ -129,3 +129,8 @@
     position: relative;
     top: 25px;
 }
+
+.list_margin {
+    width: 22rem;
+    margin: 0 auto;
+}

@@ -21,7 +21,7 @@
             <h1 class="title"> {{ object.title }} </h1>
             <p class="content"> {{ object.content }} </p>
             {% for tag in object.tags.all %}
-                <li style="display:inline;"> #{{ tag }} </li>
+                <li class= "tag_display"> #{{ tag }} </li>
             {% endfor %}
             <div class="like_section">
                 <!-- 좋아요 누르기 전 -->
