@@ -169,7 +169,7 @@
                 icon: '/static/image/icon.png'
             },
             library: {
-                icon:'/static/image/icon2.png'
+                icon:'/static/image/icon.png'
             }
             
         };
@@ -192,7 +192,11 @@
             var marker = new google.maps.Marker({
                 position: nanjang.position,
                 map: map,
-                label: NanjangList[NanjangCount++],
+                label: {
+                    text: NanjangList[NanjangCount++],
+                    color: 'white',
+                    fontSize: '12px',
+                },
                 icon: icons[nanjang.type].icon,
                 title: "난장",
             });
