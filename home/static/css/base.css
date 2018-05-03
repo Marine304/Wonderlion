@@ -193,3 +193,14 @@
     width: 200px;
     height: 37px;    
 }
+
+@media screen and (max-width: 550px) {
+     #banner1 {
+         content:url('/static/image/m_banner.jpg');
+     }
+     #banner2 {
+         
+         content:url('/static/image/m_banner1.jpg');
+     }
+    
+}

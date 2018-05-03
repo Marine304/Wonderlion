@@ -14,5 +14,6 @@ window.onload = function() {
 
 
 function movePage(target) {
-    window.location.href = "http://www.localhost:8000/home/main/#" + target;
+    window.location.href = "http://localhost:8000/home/main/#" + target;
 }
+
