@@ -153,10 +153,7 @@
 .list_margin {
     width: 22rem;
     margin: 0 auto;
-<<<<<<< HEAD
-=======
     margin-bottom: 10px;
->>>>>>> dea6d0d4bcd26d2b1949dfce52cb3803a72f606f
 }
 
 .tag_display {
@@ -176,9 +173,14 @@
 }
 /*-------------------------------------------------*/
 
-
 /*category*/
 .category {
-    width: 370px;
+    width: 200px;
     margin: 0 auto;
+}
+
+.category > img {
+    margin: 40px 0px 40px 0px;
+    width: 200px;
+    height: 37px;    
 }
