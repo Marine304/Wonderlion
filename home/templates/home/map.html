@@ -179,7 +179,10 @@
             var marker = new google.maps.Marker({
                 position: jujum.position,
                 map: map,
-                label: JujumList[JujumCount++],
+                label: {
+                    text: JujumList[JujumCount++],
+                    color: 'white',
+                },
                 icon: icons[jujum.type].icon,
                 title: "주점",
             });
