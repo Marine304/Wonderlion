@@ -1,10 +1,16 @@
- * {
+/*-------------------------------------------------*/
+
+/* 전체 적용 */
+
+* {
     padding: 0;
  }
 
+/*-------------------------------------------------*/
+
  #map {
     width: 100%;
-    height: 400px;
+    height: 600px;
     background-color: grey;
  }
 
@@ -17,7 +23,49 @@
     margin-top: 80px;
 }
 
+/*-------------------------------------------------*/
+
+/* WONDERFUL모션  */
+
+@-webkit-keyframes swinging {
+    0% {
+        -webkit-transform: rotate(10deg);
+    }
+    50% {
+        -webkit-transform: rotate(-5deg)
+    }
+    100% {
+        -webkit-transform: rotate(10deg);
+    }
+}
+
+@keyframes swinging {
+    0% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-5deg)
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+/*-------------------------------------------------*/
+
+
+/* 축제 일정 */
+
+#calendar > div, #lineup > div {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*-------------------------------------------------*/
+
+
 /* navigation */
+
 .navbar {
     margin-bottom: 20px;
 }
@@ -27,23 +75,45 @@
     margin-bottom: 30px;
 }
 
-/* 축제 일정 */
-#calendar {
+.nav-logo {
+    font-size: 1.7em;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+    animation: swinging 3.5s ease-in-out forwards infinite;
 
 }
 
-#calendar > div, #lineup > div {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.nav-logo > p {
+    color: #cabaf2;
+    font-weight: 800;
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #cabaf2,
+    0 0 30px #cabaf2,
+    0 0 40px #cabaf2,
+    0 0 55px #cabaf2,
+    0 0 75px #cabaf2;
 }
+
+
+.nav-text {
+    font-size: 1.1em;
+}
+
+/*-------------------------------------------------*/
 
 /* 라인 업 */
+
 #lineup > div > h3 {
     font-weight: 800;
 }
 
+
+/*-------------------------------------------------*/
+
 /* 난장 및 주점 디테일 */
+
 .nanjang_image > img, .jujum_image > img {
     border-radius: 8px;
 }
@@ -73,4 +143,64 @@
 
 .jujum-card {
     height: 480px;
+}
+
+.detail_map {
+    position: relative;
+    top: 25px;
+}
+
+.list_margin {
+    width: 22rem;
+    margin: 0 auto;
+}
+
+.tag_display {
+    display:inline;
+}
+
+.more {
+    background-color: lavender;
+}
+
+.more:hover {
+    background-color: #c42ba2ab;
+}
+
+.dummy_margin {
+    margin-bottom: 60px;
+}
+
+.margin_bottom {
+    margin-bottom: 10px;
+}
+
+.lineup_img {
+    width: 100%;
+    height: 360px;
+    border-radius: 10px;
+}
+/*-------------------------------------------------*/
+
+/*category*/
+.category {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.category > img {
+    margin: 40px 0px 40px 0px;
+    width: 200px;
+    height: 37px;    
+}
+
+@media screen and (max-width: 550px) {
+     #banner1 {
+         content:url('/static/image/m_banner.jpg');
+     }
+     #banner2 {
+         
+         content:url('/static/image/m_banner1.jpg');
+     }
+    
 }
