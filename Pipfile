@@ -7,6 +7,8 @@ name = "pypi"
 django-extensions = "*"
 django-taggit = "*"
 pillow = "*"
+django = "*"
+werkzeug = "*"
 
 [dev-packages]
 pylint = "*"
