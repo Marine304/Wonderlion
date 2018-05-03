@@ -79,7 +79,7 @@ h2 {
 /* 반응형 */
 @media screen and (max-width: 550px) {
     #wonderful {
-        background: url("/static/image/main.jpg") 50% 50% no-repeat fixed;
+        background: url("/static/image/m_main.jpeg") 50% 50% no-repeat fixed;
         background-size: 100% auto;
     }
 
@@ -98,19 +98,19 @@ h2 {
     }
 
     #lineup {
-        background: url("/static/image/line_up.jpeg") 50% 50% no-repeat;
+        background: url("/static/image/m_line_up.jpeg") 50% 50% no-repeat;
     }
 
     #lineup_1 {
-        background: url("/static/image/line_up_1.jpeg") 50% 50% no-repeat;
+        background: url("/static/image/m_line_up_1.jpeg") 50% 50% no-repeat;
     }
 
     #lineup_2 {
-        background: url("/static/image/line_up_2.jpeg") 50% 50% no-repeat;
+        background: url("/static/image/m_line_up_2.jpeg") 50% 50% no-repeat;
     }
 
     #lineup_3 {
-        background: url("/static/image/line_up_3.jpeg") 50% 50% no-repeat;
+        background: url("/static/image/m_line_up_3.jpeg") 50% 50% no-repeat;
     }
 
     #lineup,
