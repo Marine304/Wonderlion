@@ -1,6 +1,8 @@
+<div class="dummy dummy_margin" id="jujum_info"></div>
+
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item active" id="jujum_info" aria-current="page">주점 정보</li>
+        <li class="breadcrumb-item active" aria-current="page">주점 정보</li>
     </ol>
 </nav>
 
@@ -27,7 +29,7 @@
                     <li class="tag_display"> #{{ tag }} </li>
                 {% endfor %}
                 <br /><br />
-                <a href="{% url 'jujum:detail' jujum.pk %}" class="btn btn-light">more</a>
+                <a href="{% url 'jujum:detail' jujum.pk %}" class="btn btn-light more">more</a>
             </div>
         </div>
     </div>

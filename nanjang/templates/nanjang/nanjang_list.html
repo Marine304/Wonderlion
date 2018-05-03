@@ -1,7 +1,10 @@
 {% block nanjang_list %}
+
+<div class="dummy dummy_margin" id="nanjang_info"></div>
+
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item active" id="nanjang_info" aria-current="page">난장 정보</li>
+        <li class="breadcrumb-item active" aria-current="page">난장 정보</li>
     </ol>
 </nav>
 
@@ -25,7 +28,7 @@
                     <li class= "tag_display"> #{{ tag }} </li>
                 {% endfor %}
                 <br />
-                <a href="{% url 'nanjang:detail' nanjang.pk %}" class="btn btn-light">more</a>
+                <a href="{% url 'nanjang:detail' nanjang.pk %}" class="btn btn-light more">more</a>
             </div>
         </div>
     </div>
