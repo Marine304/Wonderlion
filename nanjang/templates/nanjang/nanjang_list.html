@@ -1,17 +1,17 @@
 {% block nanjang_list %}
+{% load staticfiles %}
 
 <div class="dummy dummy_margin" id="nanjang_info"></div>
 
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">난장 정보</li>
-    </ol>
-</nav>
+<div class="category">
+    <img src="{% static '/image/nanjang.jpg' %}">
+</div>
+
 
 <div class="row">
     {% for nanjang in nanjang_list %}
     <div class="col-xs-12 col-md-6 col-lg-6 col-xl-4">
-        <div class="card list_margin">
+        <div class="card list_margin margin_bottom">
             {% if nanjang.menu %}
             <img class="card-img-top" src="{{ nanjang.menu.url }}"> 
             {% else %}
@@ -21,7 +21,6 @@
                 <h5 class="card-title">
                     {{ nanjang.title }}
                     <span class="badge badge-secondary">New</span>
-                    <span class="badge badge-danger">Danger</span>
                 </h5>
                 <p class="card-text content"> {{ nanjang.content }} </p>
                 {% for tag in jujum.tags.all %}
