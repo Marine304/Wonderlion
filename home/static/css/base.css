@@ -1,6 +1,12 @@
- * {
+/*-------------------------------------------------*/
+
+/* 전체 적용 */
+
+* {
     padding: 0;
  }
+
+/*-------------------------------------------------*/
 
  #map {
     width: 100%;
@@ -17,7 +23,53 @@
     margin-top: 80px;
 }
 
+/*-------------------------------------------------*/
+
+/* WONDERFUL모션  */
+
+@-webkit-keyframes swinging {
+    0% {
+        -webkit-transform: rotate(10deg);
+    }
+    50% {
+        -webkit-transform: rotate(-5deg)
+    }
+    100% {
+        -webkit-transform: rotate(10deg);
+    }
+}
+
+@keyframes swinging {
+    0% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-5deg)
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+/*-------------------------------------------------*/
+
+
+/* 축제 일정 */
+
+#calendar {
+
+}
+
+#calendar > div, #lineup > div {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*-------------------------------------------------*/
+
+
 /* navigation */
+
 .navbar {
     margin-bottom: 20px;
 }
@@ -49,51 +101,22 @@
 }
 
 
-@-webkit-keyframes swinging {
-    0% {
-        -webkit-transform: rotate(10deg);
-    }
-    50% {
-        -webkit-transform: rotate(-5deg)
-    }
-    100% {
-        -webkit-transform: rotate(10deg);
-    }
-}
-
-@keyframes swinging {
-    0% {
-        transform: rotate(10deg);
-    }
-    50% {
-        transform: rotate(-5deg)
-    }
-    100% {
-        transform: rotate(10deg);
-    }
-}
-
 .nav-text {
     font-size: 1.1em;
 }
 
-/* 축제 일정 */
-#calendar {
-
-}
-
-#calendar > div, #lineup > div {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+/*-------------------------------------------------*/
 
 /* 라인 업 */
+
 #lineup > div > h3 {
     font-weight: 800;
 }
 
+/*-------------------------------------------------*/
+
 /* 난장 및 주점 디테일 */
+
 .nanjang_image > img, .jujum_image > img {
     border-radius: 8px;
 }
@@ -125,7 +148,19 @@
     height: 480px;
 }
 
-.nanjang_map {
+.detail_map {
     position: relative;
     top: 25px;
 }
+
+.list_margin {
+    width: 22rem;
+    margin: 0 auto;
+}
+
+.tag_display {
+    display:inline;
+}
+
+/*-------------------------------------------------*/
+
