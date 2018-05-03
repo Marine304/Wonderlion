@@ -36,7 +36,7 @@
     <div id="fullpage">
         <div class="section">
             <a href="{% url 'home:main' %}">
-            <div id="wonderful">
+            <div id="wonderful" onclick="movePage();">
                 <div class="wonderful_nav">
                     <a id='main_nav' href="{% url 'home:main' %}">상세페이지</a>
                 </div>
@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-xs-6 col-md-4"></div>
                     <div class="col-xs-6 col-md-4">
-                        <img src="{% static 'image/calendar.jpeg' %}" width=400>
+                        <img src="{% static 'image/calendar.jpeg' %}" width=400 onclick="movePage('calendar_info');">
                     </div>
                     <div class="col-xs-6 col-md-4"></div>
                 </div>
@@ -59,7 +59,7 @@
                 <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <img src="{% static 'image/golden_bell.jpeg' %}" width=400>
+                        <img src="{% static 'image/golden_bell.jpeg' %}" width=400 onclick="movePage('lineup_info');">
                     </div>
                     <div class="col-md-4"></div>
                 </div>
@@ -69,7 +69,7 @@
                 <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <img src="{% static 'image/festival_1.jpeg' %}" width=400>
+                        <img src="{% static 'image/festival_1.jpeg' %}" width=400 onclick="movePage();">
                     </div>
                     <div class="col-md-4"></div>
                 </div>
@@ -79,7 +79,7 @@
                 <div class="row">
                     <div class="col-md-4"></div>                    
                     <div class="col-md-4">
-                        <img src="{% static 'image/festival_2.jpeg' %}" width=400>
+                        <img src="{% static 'image/festival_2.jpeg' %}" width=400 onclick="movePage();">
                     </div>
                     <div class="col-md-4"></div>
                 </div>
@@ -92,22 +92,22 @@
                 <div class="intro"></div>
             </div>
 
-            <div class="slide" id="lineup_1">
+            <div class="slide" id="lineup_1" onclick="movePage('lineup_info');">
                 <div class="intro" ></div>
             </div>
-            <div class="slide" id="lineup_2">
+            <div class="slide" id="lineup_2" onclick="movePage('lineup_info');">
                 <div class="intro"></div>
             </div>
-            <div class="slide" id="lineup_3">
+            <div class="slide" id="lineup_3" onclick="movePage('lineup_info');">
                 <div class="intro"></div>
             </div>   
         </div>
         
         <div class="section" id="section-3">
-            <h1>난장 정보</h1>
+            <h1 onclick="movePage();">난장 정보</h1>
         </div>
         <div class="section" id="section-4">
-            <h1>주점 정보</h1>
+            <h1 onclick="movePage();">주점 정보</h1>
         </div>
         <div class="section" id="map"></div>
     </div>
