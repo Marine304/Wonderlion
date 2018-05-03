@@ -103,6 +103,17 @@
 
 /*-------------------------------------------------*/
 
+/* 축제 일정 */
+.calendar-title {
+    font-size: 3em;
+    font-weight: 500;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.calendar-img {
+    border-radius: 10px;
+}
+
 /* 라인 업 */
 
 #lineup > div > h3 {
