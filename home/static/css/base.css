@@ -162,5 +162,12 @@
     display:inline;
 }
 
+.more {
+    background-color: lavender;
+}
+
+.more:hover {
+    background-color: #c42ba2ab;
+}
 /*-------------------------------------------------*/
 
