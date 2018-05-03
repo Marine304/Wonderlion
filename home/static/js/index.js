@@ -1,6 +1,6 @@
-window.onload=function() {
+window.onload = function() {
     var wonderful = document.getElementById("main_nav");
-    console.log(wonderful);
+
     if (wonderful) {
       wonderful.addEventListener("mouseover", function(event) {
           event.target.style.color = "#e85757";
@@ -9,4 +9,10 @@ window.onload=function() {
           }, 500);
         }, false);
     }
+
+}
+
+
+function movePage(target) {
+    window.location.href = "http://www.localhost:8000/home/main/#" + target;
 }
