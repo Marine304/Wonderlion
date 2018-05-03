@@ -14,5 +14,6 @@ window.onload = function() {
 
 
 function movePage(target) {
-    window.location.href = "http://www.localhost:8000/home/main/#" + target;
+    window.location.href = "https://99ce1693eebc4523ad15a8d2757fb5c7.vfs.cloud9.us-east-2.amazonaws.com/home/main/#" + target;
 }
+s
