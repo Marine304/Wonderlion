@@ -1,6 +1,12 @@
- * {
+/*-------------------------------------------------*/
+
+/* 전체 적용 */
+
+* {
     padding: 0;
  }
+
+/*-------------------------------------------------*/
 
  #map {
     width: 100%;
@@ -17,37 +23,9 @@
     margin-top: 80px;
 }
 
-/* navigation */
-.navbar {
-    margin-bottom: 20px;
-}
+/*-------------------------------------------------*/
 
-.banner {
-    border-radius: 10px;
-    margin-bottom: 30px;
-}
-
-.nav-logo {
-    font-size: 1.7em;
-    -webkit-transform-origin: 50% 0;
-    transform-origin: 50% 0;
-    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
-    animation: swinging 3.5s ease-in-out forwards infinite;
-
-}
-
-.nav-logo > p {
-    color: #cabaf2;
-    font-weight: 800;
-    text-shadow: 0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 30px #fff,
-    0 0 40px #cabaf2,
-    0 0 55px #cabaf2,
-    0 0 75px #cabaf2;
-}
-
+/* WONDERFUL모션  */
 
 @-webkit-keyframes swinging {
     0% {
@@ -72,12 +50,11 @@
         transform: rotate(10deg);
     }
 }
+/*-------------------------------------------------*/
 
-.nav-text {
-    font-size: 1.1em;
-}
 
 /* 축제 일정 */
+
 #calendar {
 
 }
@@ -88,12 +65,58 @@
     padding-bottom: 20px;
 }
 
+/*-------------------------------------------------*/
+
+
+/* navigation */
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.banner {
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.nav-logo {
+    font-size: 1.7em;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+    animation: swinging 3.5s ease-in-out forwards infinite;
+
+}
+
+.nav-logo > p {
+    color: #cabaf2;
+    font-weight: 800;
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #cabaf2,
+    0 0 30px #cabaf2,
+    0 0 40px #cabaf2,
+    0 0 55px #cabaf2,
+    0 0 75px #cabaf2;
+}
+
+
+.nav-text {
+    font-size: 1.1em;
+}
+
+/*-------------------------------------------------*/
+
 /* 라인 업 */
+
 #lineup > div > h3 {
     font-weight: 800;
 }
 
+/*-------------------------------------------------*/
+
 /* 난장 및 주점 디테일 */
+
 .nanjang_image > img, .jujum_image > img {
     border-radius: 8px;
 }
@@ -125,7 +148,19 @@
     height: 480px;
 }
 
-.nanjang_map {
+.detail_map {
     position: relative;
     top: 25px;
 }
+
+.list_margin {
+    width: 22rem;
+    margin: 0 auto;
+}
+
+.tag_display {
+    display:inline;
+}
+
+/*-------------------------------------------------*/
+

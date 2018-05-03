@@ -8,7 +8,7 @@
 <div class="row">
     {% for jujum in jujum_list %}
     <div class="col-xs-12 col-md-6 col-lg-6 col-xl-4">
-        <div class="card" style="width: 22rem; margin: 0 auto;">
+        <div class="card list_margin">
             {% if jujum.menu %}
             <img class="card-img-top jujum-card" src="{{ jujum.menu.url }}">
             {% else %}
@@ -24,7 +24,7 @@
 
                 <p class="card-text content"> {{ jujum.content }} </p>
                 {% for tag in jujum.tags.all %}
-                    <li style="display:inline;"> #{{ tag }} </li>
+                    <li class="tag_display"> #{{ tag }} </li>
                 {% endfor %}
                 <br /><br />
                 <a href="{% url 'jujum:detail' jujum.pk %}" class="btn btn-light">more</a>
