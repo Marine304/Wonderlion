@@ -194,4 +194,17 @@
     height: 37px;    
 }
 
+<<<<<<< HEAD
 /*라인업 hover*/
+=======
+@media screen and (max-width: 550px) {
+     #banner1 {
+         content:url('/static/image/m_banner.jpg');
+     }
+     #banner2 {
+         
+         content:url('/static/image/m_banner1.jpg');
+     }
+    
+}
+>>>>>>> bb769e979c3149e8bb0fda740f150a03d5e7c79a

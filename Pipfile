@@ -1,15 +1,25 @@
 [[source]]
+
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
+
 [packages]
+
 django-extensions = "*"
 django-taggit = "*"
 pillow = "*"
+django = "*"
+werkzeug = "*"
+awsebcli = "*"
+
 
 [dev-packages]
+
 pylint = "*"
 
+
 [requires]
+
 python_version = "3.6"

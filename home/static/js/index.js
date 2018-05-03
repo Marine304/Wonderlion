@@ -12,7 +12,7 @@ window.onload = function() {
 
 }
 
-
-function movePage(target) {
-    window.location.href = "https://aa45de5a611a43428dc29cbf73663f9a.vfs.cloud9.us-east-2.amazonaws.com/home/main/#" + target;
+function movePage(target) { 
+    window.location.href = "http://wonderful.ap-northeast-2.elasticbeanstalk.com/home/main/#" + target;
+    // window.location.href = "http://www.localhost:8000/home/main/#" + target;
 }
