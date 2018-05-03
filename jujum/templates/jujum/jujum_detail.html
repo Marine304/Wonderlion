@@ -90,6 +90,180 @@
                     label: '{{ object.title }}',
                     title: "주점",
         });
+    
+        var jujums = [
+            // 수덕호 오른쪽 길 건너편
+            {   //화학
+                position: new google.maps.LatLng(35.969094, 126.956922),
+                type: 'info',
+            }, {
+                //수인회
+                position: new google.maps.LatLng(35.969289, 126.956917),
+                type: 'info',
+            }, {
+                //경영대학생회
+                position: new google.maps.LatLng(35.969580, 126.956909),
+                type: 'info',
+            }, {
+                //국통
+                position: new google.maps.LatLng(35.969864, 126.956903),
+                type: 'info',
+            },{
+                //FC리더스
+                position: new google.maps.LatLng(35.969878, 126.956795),
+                type: 'info',
+            }, {
+                //소주주소
+                position: new google.maps.LatLng(35.969590, 126.956817),
+                type: 'info',
+            }, {
+                //생명과학부
+                position: new google.maps.LatLng(35.969293, 126.956824),
+                type: 'info',
+            }, {
+                //봉황인재학과
+                position: new google.maps.LatLng(35.969158, 126.956700),
+                type: 'info',
+            }, {
+                //경영
+                position: new google.maps.LatLng(35.969124, 126.956489),
+                type: 'info',
+            }, {
+                //미술
+                position: new google.maps.LatLng(35.969101, 126.956284),
+                type: 'info',
+            }, {
+                //블루킥스
+                position: new google.maps.LatLng(35.969079, 126.956085),
+                type: 'info',
+            }, {
+                //경행
+                position: new google.maps.LatLng(35.969052, 126.955933),
+                type: 'info',
+            }, {
+                //건축
+                position: new google.maps.LatLng(35.969002, 126.955777),
+                type: 'info',
+            }, {
+                //경제
+                position: new google.maps.LatLng(35.968883, 126.955626),
+                type: 'info',
+            }, {
+                //성공하자
+                position: new google.maps.LatLng(35.968933, 126.955801),
+                type: 'info',
+            }, {
+                //스과
+                position: new google.maps.LatLng(35.968966, 126.955955),
+                type: 'info',
+            }, {
+                //체교
+                position: new google.maps.LatLng(35.968988, 126.956110),
+                type: 'info',
+            }, {
+                //산디
+                position: new google.maps.LatLng(35.969013, 126.956311),
+                type: 'info',
+            }, {
+                //반도체디스플레이
+                position: new google.maps.LatLng(35.969034, 126.956520),
+                type: 'info',
+            }, {
+                //토공
+                position: new google.maps.LatLng(35.969046, 126.956742),
+                type: 'info',
+            }, {
+                //외국인
+                position: new google.maps.LatLng(35.968968, 126.955636),
+                type: 'info',
+            }
+        ];
+
+        var nanjangs = [
+            //좌측
+            {   //신방
+                position: new google.maps.LatLng(35.967838, 126.956725),
+                type: 'info',
+            }, {
+                //안다미로
+                position: new google.maps.LatLng(35.967721, 126.956678),
+                type: 'info',
+            }, {
+                //아나나
+                position: new google.maps.LatLng(35.967621, 126.956661),
+                type: 'info',
+            }, {
+                //그린나래
+                position: new google.maps.LatLng(35.967523, 126.956600),
+                type: 'info',
+            }, {
+                //월간청춘
+                position: new google.maps.LatLng(35.967414, 126.956547),
+                type: 'info',
+            }, {
+                //에이드나라 소떡공주
+                position: new google.maps.LatLng(35.967331, 126.956516),
+                type: 'info',
+            },
+
+            // 우측
+            {   //스타멍스
+                position: new google.maps.LatLng(35.967290, 126.956676),
+                type: 'info',
+            }, {
+                //윤슬
+                position: new google.maps.LatLng(35.967374, 126.95670),
+                type: 'info',
+            }, {
+                //온에어
+                position: new google.maps.LatLng(35.967473, 126.956754),
+                type: 'info',
+            }, {
+                //율마켓
+                position: new google.maps.LatLng(35.967584, 126.956796),
+                type: 'info',
+            }, {
+                //쏨리
+                position: new google.maps.LatLng(35.967683, 126.956847),
+                type: 'info',
+            }
+        ]
+
+        var JujumList = ['화학', '수인회','경영대학생회','국통','FC리더스','소주주소','생명과학','봉황인재','경영','미술','블루킥스','경행','건축','경제','성공하자','스과','체교','산디','반도체','토공','외국인'];
+        var NanjangList = ['신방', '안다미로', '아나나', '그린나래', '월관청춘', '에이드나라소떡공주', '스타멍스', '윤슬', '온에어', '율마켓', '쏨리'];
+        var JujumCount = 0;
+        var NanjangCount = 0;
+
+        var icons = {
+            info: {
+                icon: '/static/image/icon.png'
+            }
+        };
+
+        jujums.forEach(function (jujum) {
+            var marker = new google.maps.Marker({
+                position: jujum.position,
+                map: map,
+                label: {
+                    text: JujumList[JujumCount++],
+                    color: 'white',
+                    fontSize: '12px',
+                },
+                icon: icons[jujum.type].icon,
+                title: "주점",
+            });
+        });
+
+        nanjangs.forEach(function (nanjang) {
+            var marker = new google.maps.Marker({
+                position: nanjang.position,
+                map: map,
+                label: NanjangList[NanjangCount++],
+                icon: icons[nanjang.type].icon,
+                title: "난장",
+            });
+        });
+        
     }
 </script>
 
