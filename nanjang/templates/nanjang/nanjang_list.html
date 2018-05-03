@@ -11,7 +11,7 @@
 <div class="row">
     {% for nanjang in nanjang_list %}
     <div class="col-xs-12 col-md-6 col-lg-6 col-xl-4">
-        <div class="card list_margin">
+        <div class="card list_margin margin_bottom">
             {% if nanjang.menu %}
             <img class="card-img-top" src="{{ nanjang.menu.url }}"> 
             {% else %}
@@ -28,7 +28,7 @@
                     <li class= "tag_display"> #{{ tag }} </li>
                 {% endfor %}
                 <br />
-                <a href="{% url 'nanjang:detail' nanjang.pk %}" class="btn btn-light">more</a>
+                <a href="{% url 'nanjang:detail' nanjang.pk %}" class="btn btn-light more">more</a>
             </div>
         </div>
     </div>
