@@ -10,7 +10,7 @@
 
  #map {
     width: 100%;
-    height: 400px;
+    height: 600px;
     background-color: grey;
  }
 
@@ -54,10 +54,6 @@
 
 
 /* 축제 일정 */
-
-#calendar {
-
-}
 
 #calendar > div, #lineup > div {
     text-align: center;
@@ -157,11 +153,26 @@
 .list_margin {
     width: 22rem;
     margin: 0 auto;
+<<<<<<< HEAD
+=======
+    margin-bottom: 10px;
+>>>>>>> dea6d0d4bcd26d2b1949dfce52cb3803a72f606f
 }
 
 .tag_display {
     display:inline;
 }
 
+.more {
+    background-color: lavender;
+}
+
+.more:hover {
+    background-color: #c42ba2ab;
+}
+
+.dummy_margin {
+    margin-bottom: 60px;
+}
 /*-------------------------------------------------*/
 

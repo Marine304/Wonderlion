@@ -1,6 +1,8 @@
+<div class="dummy dummy_margin" id="map_info"></div>
+
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item active" id="map_info" aria-current="page">
+        <li class="breadcrumb-item active" aria-current="page">
             <center>
                 주점 및 난장 위치
             </center>
@@ -164,7 +166,7 @@
             }
         ]
 
-        var JujumList = ['화학', '수인회','경영대학생회','국통','FC리더스','소주주소','생명과학','봉황인재','경영','미술','블루킥스','경행','건축','경제','성공하자','스과','체교','산업디자인','반도체디스플레이','토공','외국인'];
+        var JujumList = ['화학', '수인회','경영대학생회','국통','FC리더스','소주주소','생명과학','봉황인재','경영','미술','블루킥스','경행','건축','경제','성공하자','스과','체교','산디','반도체','토공','외국인'];
         var NanjangList = ['신방', '안다미로', '아나나', '그린나래', '월관청춘', '에이드나라소떡공주', '스타멍스', '윤슬', '온에어', '율마켓', '쏨리'];
         var JujumCount = 0;
         var NanjangCount = 0;
@@ -179,7 +181,11 @@
             var marker = new google.maps.Marker({
                 position: jujum.position,
                 map: map,
-                label: JujumList[JujumCount++],
+                label: {
+                    text: JujumList[JujumCount++],
+                    color: 'white',
+                    fontSize: '12px',
+                },
                 icon: icons[jujum.type].icon,
                 title: "주점",
             });

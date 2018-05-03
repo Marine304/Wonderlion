@@ -14,21 +14,21 @@
     <link rel="stylesheet" href="{% static 'css/fullpage.css' %}">
     
     <script src="{% static 'js/index.js' %}"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
     
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         
     <script>
         $(document).ready(function () {
             $('#fullpage').fullpage({
-                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
-                sectionsColor: ['rgba(0, 2, 45, 1)', 'rgba(0, 2, 45, 1)', 'rgba(0, 2, 45, 1)', '#fec402', '#f6c4e2', '#d2c3f4'],
+                anchors: ['wonderful', 'calendar', 'lineup', 'map' ],
+                sectionsColor: ['rgba(0, 2, 45, 1)', 'rgba(0, 2, 45, 1)', 'rgba(0, 2, 45, 1)', '#d2c3f4'],
                 navigation: true,
-                navigationTooltips: ['WONDERFUL', '축제 일정', 'LINE UP', '난장', '주점', 'MAP'],
+                navigationTooltips: ['WONDERFUL', '축제 일정', 'LINE UP', 'MAP'],
             });
         });
     </script>
@@ -36,13 +36,7 @@
 <body>
     <div id="fullpage">
         <div class="section">
-            <a href="{% url 'home:main' %}">
-            <div id="wonderful" onclick="movePage();">
-                <div class="wonderful_nav">
-                    <a id='main_nav' href="{% url 'home:main' %}">상세페이지</a>
-                </div>
-            </div>
-            </a>
+            <div id="wonderful" onclick="movePage();"></div>
         </div>
         
         <div class="section" id="calendar">
@@ -104,12 +98,6 @@
             </div>   
         </div>
         
-        <div class="section" id="section-3">
-            <h1 onclick="movePage();">난장 정보</h1>
-        </div>
-        <div class="section" id="section-4">
-            <h1 onclick="movePage();">주점 정보</h1>
-        </div>
         <div class="section" id="map"></div>
     </div>
     
