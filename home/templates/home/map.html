@@ -114,49 +114,49 @@
             //좌측
             {   //신방
                 position: new google.maps.LatLng(35.967838, 126.956725),
-                type: 'info',
+                type: 'library',
             }, {
                 //안다미로
                 position: new google.maps.LatLng(35.967721, 126.956678),
-                type: 'info',
+                type: 'library',
             }, {
                 //아나나
                 position: new google.maps.LatLng(35.967621, 126.956661),
-                type: 'info',
+                type: 'library',
             }, {
                 //그린나래
                 position: new google.maps.LatLng(35.967523, 126.956600),
-                type: 'info',
+                type: 'library',
             }, {
                 //월간청춘
                 position: new google.maps.LatLng(35.967414, 126.956547),
-                type: 'info',
+                type: 'library',
             }, {
                 //에이드나라 소떡공주
                 position: new google.maps.LatLng(35.967331, 126.956516),
-                type: 'info',
+                type: 'library',
             },
 
             // 우측
             {   //스타멍스
                 position: new google.maps.LatLng(35.967290, 126.956676),
-                type: 'info',
+                type: 'library',
             }, {
                 //윤슬
                 position: new google.maps.LatLng(35.967374, 126.95670),
-                type: 'info',
+                type: 'library',
             }, {
                 //온에어
                 position: new google.maps.LatLng(35.967473, 126.956754),
-                type: 'info',
+                type: 'library',
             }, {
                 //율마켓
                 position: new google.maps.LatLng(35.967584, 126.956796),
-                type: 'info',
+                type: 'library',
             }, {
                 //쏨리
                 position: new google.maps.LatLng(35.967683, 126.956847),
-                type: 'info',
+                type: 'library',
             }
         ]
 
@@ -164,11 +164,14 @@
         var NanjangList = ['신방', '안다미로', '아나나', '그린나래', '월관청춘', '에이드나라소떡공주', '스타멍스', '윤슬', '온에어', '율마켓', '쏨리'];
         var JujumCount = 0;
         var NanjangCount = 0;
-
         var icons = {
             info: {
                 icon: '/static/image/icon.png'
+            },
+            library: {
+                icon:'/static/image/icon2.png'
             }
+            
         };
 
         jujums.forEach(function (jujum) {
