@@ -13,9 +13,9 @@
     <div class="col-xs-12 col-md-6 col-lg-6 col-xl-4">
         <div class="card list_margin margin_bottom">
             {% if nanjang.menu %}
-            <img class="card-img-top" src="{{ nanjang.menu.url }}"> 
+            <img class="card-img-top jujum-card" src="{{ nanjang.menu.url }}"> 
             {% else %}
-            <img class="card-img-top" src="/static/image/default.jpg"> 
+            <img class="card-img-top jujum-card" src="/static/image/default.jpg"> 
             {% endif %}
             <div class="card-body">
                 <h5 class="card-title">
@@ -23,9 +23,11 @@
                     <span class="badge badge-secondary">New</span>
                 </h5>
                 <p class="card-text content"> {{ nanjang.content }} </p>
-                {% for tag in nanjang.tags.all %}
-                    <li class= "tag_display"> #{{ tag }} </li>
-                {% endfor %}
+                <div class="tag_section">
+                    {% for tag in nanjang.tags.all %}
+                        <li class= "tag_display"> #{{ tag }} </li>
+                    {% endfor %}
+                </div>
                 <br />
                 <a href="{% url 'nanjang:detail' nanjang.pk %}" class="btn btn-light more">more</a>
             </div>

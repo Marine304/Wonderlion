@@ -21,13 +21,14 @@
             <h1> {{ object.title }} </h1>
             <p> {{ object.content }} </p>
 
-            {% for tag in object.tags.all %}
-                <li class= "tag_display"> #{{ tag }} </li>
-            {% endfor %}
+            <div class="tag_section">
+                {% for tag in object.tags.all %}
+                    <li class= "tag_display"> #{{ tag }} </li>
+                {% endfor %}
+            </div>
 
             <div class="like_section">
-                <p id="count_like-{{ object.id }}">{{ object.like_count }}개</p>
-                
+                <p style="display:inline;" id="count_like-{{ object.id }}">{{ object.like_count }}개</p>
                 <i class="like far fa-heart fa-lg"></i>
             </div>
         </div>
@@ -56,13 +57,13 @@
     </script>
 
     <p>
-        <a class="btn btn-light" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <buttuon class="map_detail btn btn-light" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
             상세 위치
-        </a>
+        </button>
     </p>
     <div class="collapse" id="collapseExample">
         <div class="card card-body">
-            <div class="col-md-14">
+            <div class="col-md-12">
         <div id="map"></div>
     </div>
         </div>
@@ -100,7 +101,7 @@
                     map: map,
                     label: '{{ object.title }}',
                     title: "주점",
-                    icon: '/static/image/icon.png'
+                    icon: '/static/image/icon2.png'
         });
     }
 </script>

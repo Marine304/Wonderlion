@@ -2,11 +2,8 @@
     margin: 0;
     padding: 0;
 }
-
-.section.fp-table {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
+.section.fp-section {
+    height: 100%;
 }
 
 h1 {
@@ -81,20 +78,6 @@ h2 {
     #wonderful {
         background: url("/static/image/m_main.jpeg") 50% 50% no-repeat fixed;
         background-size: 100% auto;
-    }
-
-    #wonderful h1 {
-        margin: 10px 30px 10px;
-        font-size: 3em;
-        font-weight: 900;
-        color: #fff;
-    }
-
-    #wonderful h2 {
-        color: rgba(255, 255, 255, .7);
-        font-size: 1.3em;
-        font-weight: 100;
-        margin: -10px 30px 10px;
     }
 
     #lineup {

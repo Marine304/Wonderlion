@@ -110,10 +110,11 @@
     font-family: 'Nanum Pen Script', cursive;
 }
 
-.calendar-img {
-    border-radius: 10px;
+.calendar-content {
+    font-size: 1.5em;
+    font-weight: 400;
+    font-family: 'Nanum Pen Script', cursive;
 }
-
 /* 라인 업 */
 
 #lineup > div > h3 {
@@ -153,7 +154,7 @@
 }
 
 .jujum-card {
-    height: 480px;
+    height: 400px;
 }
 
 .detail_map {
@@ -166,8 +167,17 @@
     margin: 0 auto;
 }
 
+.map_detail {
+    margin: 10px 0;    
+}
+
+/* tag 영역 */
 .tag_display {
     display:inline;
+}
+
+.tag_section {
+    height: 50px;
 }
 
 .more {
@@ -186,9 +196,8 @@
     margin-bottom: 10px;
 }
 
-.lineup_img {
-    width: 100%;
-    height: 360px;
+.lineup_img, .calendar-img{
+    width: 90%;
     border-radius: 10px;
 }
 /*-------------------------------------------------*/
