@@ -13,6 +13,7 @@ pillow = "*"
 django = "*"
 werkzeug = "*"
 awsebcli = "*"
+django-summernote = "*"
 
 
 [dev-packages]

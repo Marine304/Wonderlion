@@ -6,11 +6,6 @@
     padding: 0;
  }
 
- .vertical-align {
-    display: inline-block;
-    vertical-align: middle;
- }
-
 /*-------------------------------------------------*/
 
  #map {
@@ -58,11 +53,6 @@
 /*-------------------------------------------------*/
 
 
-
-
-/*-------------------------------------------------*/
-
-
 /* navigation */
 
 .navbar {
@@ -102,6 +92,16 @@
 
 /*-------------------------------------------------*/
 
+/* 배너 */
+@media screen and (max-width: 550px) {
+    #banner1 {
+        content: url('/static/image/m_banner.jpg');
+    }
+    #banner2 {
+        content: url('/static/image/m_banner1.jpg');
+    }
+}
+
 /* 축제 일정 */
 
 #calendar > div, #lineup > div {
@@ -109,7 +109,13 @@
     padding-bottom: 20px;
 }
 
+#calender_info {
+    height: 30px;
+}
+
 .calendar-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 10px;
     text-align: center;
     font-size: 4em;
@@ -119,6 +125,62 @@
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+    0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2),
+    0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.calendar-img {
+    border-radius: 10px;
+}
+
+.calendar-content {
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 400;
+    font-family: 'Sunflower', sans-serif;
+    line-height: 35px;
+}
+
+.content-title {
+    text-align: center;
+}
+
+@media screen and (max-width: 550px) {
+    .calendar-title {
+        padding: 10px;
+        text-align: center;
+        font-size: 3em;
+        font-weight: 500;
+        font-family: 'Nanum Pen Script', cursive;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    }
+
+    .calendar-content {
+        text-align: left;
+        font-size: 1em;
+        font-weight: 400;
+        font-family: 'Sunflower', sans-serif;
+        line-height: 30px;
+    }
+}
+
+/* 라인 업 */
+
+#lineup > div > h3 {
+    font-weight: 800;
+}
+
+.lineup-title {
+    padding: 10px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 500;
+    font-family: 'Nanum Pen Script', cursive;
+    /* border-top: 2px solid black;
+    border-bottom: 2px solid black; */
     text-shadow: 0 1px 0 #ccc,
     0 2px 0 #c9c9c9,
     0 3px 0 #bbb,
@@ -133,32 +195,24 @@
     0 20px 20px rgba(0, 0, 0, .15);
 }
 
-.calendar-img {
+.lineup_img {
+    width: 100%;
     border-radius: 10px;
 }
-
-.calendar-content {
-    /* margin-top: 57px; */
-    text-align: left;
-    font-size: 1.3em;
-    font-weight: 400;
-    font-family: 'Sunflower', sans-serif;
-}
-
-
-/* 라인 업 */
-
-#lineup > div > h3 {
-    font-weight: 800;
-}
-
-
 /*-------------------------------------------------*/
 
 /* 난장 및 주점 디테일 */
 
 .nanjang_image > img, .jujum_image > img {
     border-radius: 8px;
+}
+
+.jujum_content > h1 {
+    text-align: center;
+}
+
+.jujum_content > p {
+    line-height: 30px;
 }
 
 .nanjang_image, .nanjang_content, .jujum_image, .jujum_content {
@@ -199,9 +253,13 @@
 }
 
 .map_detail {
+    display: block;
     margin: 10px 0;    
 }
 
+.like {
+    color: red;
+}
 /* tag 영역 */
 .tag_display {
     display:inline;
@@ -227,10 +285,6 @@
     margin-bottom: 10px;
 }
 
-.lineup_img {
-    width: 90%;
-    border-radius: 10px;
-}
 /*-------------------------------------------------*/
 
 /*category*/
@@ -243,15 +297,4 @@
     margin: 40px 0px 40px 0px;
     width: 200px;
     height: 37px;    
-}
-
-@media screen and (max-width: 550px) {
-     #banner1 {
-         content:url('/static/image/m_banner.jpg');
-     }
-     #banner2 {
-         
-         content:url('/static/image/m_banner1.jpg');
-     }
-    
 }

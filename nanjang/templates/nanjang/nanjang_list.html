@@ -20,9 +20,9 @@
             <div class="card-body">
                 <h5 class="card-title">
                     {{ nanjang.title }}
-                    <span class="badge badge-secondary">New</span>
+                    <span class="badge badge-danger">New</span>
                 </h5>
-                <p class="card-text content"> {{ nanjang.content }} </p>
+                <p class="card-text content"> {{ nanjang.content | safe }} </p>
                 <div class="tag_section">
                     {% for tag in nanjang.tags.all %}
                         <li class= "tag_display"> #{{ tag }} </li>

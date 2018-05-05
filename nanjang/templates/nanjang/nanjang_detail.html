@@ -19,7 +19,7 @@
 
         <div class="nanjang_content col-md-6">
             <h1 class="title"> {{ object.title }} </h1>
-            <p class="content"> {{ object.content }} </p>
+            <p class="content"> {{ object.content | safe}} </p>
             <div class="tag_section">
                 {% for tag in object.tags.all %}
                     <li class= "tag_display"> #{{ tag }} </li>
@@ -56,11 +56,11 @@
         })
     </script>
     
-    <p>
-        <button class="map_detail btn btn-light" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            상세위치
-        </button>
-    </p>
+
+    <button class="map_detail btn btn-light" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        상세위치
+    </button>
+    
     <div class="collapse" id="collapseExample">
         <div class="card card-body">
             <div class="col-md-14">

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'nanjang.apps.NanjangConfig', # 주점 앱
     'jujum.apps.JujumConfig', # 난장 앱
     'taggit', # tag
+    'django_summernote', # texteditor
 ]
 
 MIDDLEWARE = [

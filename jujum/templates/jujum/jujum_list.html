@@ -17,10 +17,9 @@
             <div class="card-body">
                 <h5 class="card-title">
                     {{ jujum.title }}
-                    <span class="badge badge-secondary">New</span>
+                    <span class="badge badge-danger">New</span>
                 </h5>
 
-                <p class="card-text content"> {{ jujum.content }} </p>
                 <div class="tag_section">
                     {% for tag in jujum.tags.all %}
                         <li class="tag_display"> #{{ tag }} </li>
