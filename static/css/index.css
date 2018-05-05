@@ -47,6 +47,11 @@ h2 {
     vertical-align: middle;    
 }
 
+.main_img {
+    display: block;
+    margin: 0 auto;
+}
+
 /* 라인 업 */
 #lineup {
   background: url("/static/image/line_up.jpeg") 50% 50% no-repeat;
