@@ -13,8 +13,4 @@ window.onload=function() {
     $(".navbar-collapse a").click(function() {
       $(".navbar-collapse").collapse("hide");
     });
-
-    $(".lineup_img").bind("touchstart touchend", function(e) {
-      $(this).attr("src", $(this).data("hover"));
-    });
 }
