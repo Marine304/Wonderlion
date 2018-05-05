@@ -26,9 +26,9 @@
         $(document).ready(function () {
             $('#fullpage').fullpage({
                 anchors: ['#page1', '#page2', '#page3', '#page4' ],
-                sectionsColor: ['rgba(0, 2, 45, 1)', 'rgba(0, 2, 45, 1)', 'rgba(0, 2, 45, 1)', '#d2c3f4'],
+                sectionsColor: ['rgba(0, 2, 45, 1)', 'rgba(0, 2, 45, 1)', 'rgba(0, 2, 45, 1)'],
                 navigation: true,
-                navigationTooltips: ['WONDERFUL', '축제 일정', 'LINE UP', 'MAP'],
+                navigationTooltips: ['WONDERFUL', '축제 일정', 'LINE UP'],
             });
         });
     </script>
@@ -74,12 +74,12 @@
                 <div class="row">
                     <div class="col-md-4"></div>                    
                     <div class="col-md-4">
-                        <img class="main_img" src="{% static 'image/festival_2.jpeg' %}" width=400 onclick="movePage();">
+                        <img class="main_img" src="{% static 'image/wonderful_schedule.jpeg' %}" width=400 onclick="movePage();">
                     </div>
                     <div class="col-md-4"></div>
                 </div>
             </div>
-          
+        
         </div>
         
         <div class="section">
@@ -98,113 +98,8 @@
             </div>   
         </div>
         
-        <div class="section" id="map"></div>
     </div>
     
-
-
-    <script>
-       function initMap() {
-            var wku = { lat: 35.969285, lng: 126.956408 }
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 18,
-                center: wku,
-                scrollwheel: false,
-                navigationControl: false,
-                mapTypeControl: false,
-                scaleControl: false,
-                draggable: true,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            });
-
-            var jujums = [
-                // 수덕호 오른쪽 길 건너편
-                {
-                    position: new google.maps.LatLng(35.969778, 126.956910),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969578, 126.956910),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969378, 126.956910),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969178, 126.956910),
-                    type: 'info',
-                },
-                // 수덕호 오른쪽 
-                {
-                    position: new google.maps.LatLng(35.969778, 126.956798),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969578, 126.956798),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969378, 126.956798),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969178, 126.956798),
-                    type: 'info',
-                },
-            ];
-
-            var nanjangs = [
-                {
-                    position: new google.maps.LatLng(35.969129, 126.956706),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969114, 126.956534),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969067, 126.956080),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969090, 126.956300),
-                    type: 'info',
-                },
-
-                // 수덕호 아래 건너편
-                {
-                    position: new google.maps.LatLng(35.969049, 126.956706),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969039, 126.956534),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.969009, 126.956300),
-                    type: 'info',
-                }, {
-                    position: new google.maps.LatLng(35.968989, 126.956080),
-                    type: 'info',
-                },
-            ]
-
-            var JujumList = ['주점1', '주점2', '주점3', '주점4', '주점5', '주점6', '주점7', '주점8'];
-            var NanjangList = ['난장1', '난장2', '난장3', '난장4', '난장5', '난장6', '난장7', '난장8'];
-            var JujumCount = 0;
-            var NanjangCount = 0;
-
-            jujums.forEach(function (jujum) {
-                var marker = new google.maps.Marker({
-                    position: jujum.position,
-                    map: map,
-                    label: JujumList[JujumCount++],
-                    title: "주점",
-                });
-            });
-
-            nanjangs.forEach(function (nanjang) {
-                var marker = new google.maps.Marker({
-                    position: nanjang.position,
-                    map: map,
-                    label: NanjangList[NanjangCount++],
-                    title: "난장",
-                });
-            });
-        }
-    </script>
-    
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDksOeoLGmwSM2vTx8S92IORZi2X7iHeXw&callback=initMap"> </script>
 </body>
 </html>
 
