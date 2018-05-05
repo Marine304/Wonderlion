@@ -14,4 +14,3 @@ window.onload=function() {
       $(".navbar-collapse").collapse("hide");
     });
 }
-
