@@ -24,7 +24,7 @@ h2 {
 #wonderful {
     position: relative;
     background: url("/static/image/main.jpg") 50% 50% no-repeat fixed;
-    background-size: 100% 100%;
+    /* background-size: 100% 100%; */
     width: 100%;
     height: 100%;
 }
@@ -109,6 +109,10 @@ h2 {
         background-size: 100% auto;
         width: 100%;
         height: 100%;
+    }
+
+    #about {
+        content:url("/static/image/m_about.jpg");
     }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {

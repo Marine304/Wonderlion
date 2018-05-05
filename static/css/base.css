@@ -294,3 +294,20 @@
     width: 200px;
     height: 37px;    
 }
+
+/* about */
+
+.about-title {
+    margin: 30px auto;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    color: red;
+    text-align: center;
+}
+
+@media screen and (max-width: 550px) {
+    #about {
+        width: 100%;
+        content: url("/static/image/m_about.jpg");
+    }
+}
