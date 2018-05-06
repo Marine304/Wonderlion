@@ -29,46 +29,25 @@
 
             <div class="like_section">
                 <i class="like far fa-heart fa-lg"></i>
-                <p style="display:inline;" id="count_like-{{ object.id }}">{{ object.like_count }}개</p>
+                <p style="display:inline-block;" id="count_like-{{ object.id }}">{{ object.like_count }}개</p>
             </div>
         </div>
-
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript">
-        $(".like").click(function () {
-            var pk = '{{ jujum.pk }}'
-            $.ajax({ 
-                type: "POST", 
-                url: "{% url 'jujum:like' jujum.pk %}", 
-                data: { 'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}' }, 
-                dataType: "json", 
+    <div class="col-md-12 detail_btn">
+        <button class="map_detail btn btn-light" data-toggle="collapse" href="#detail_map" role="button" aria-expanded="false"
+            aria-controls="detail_map">
+            상세 위치
+        </button>
 
-                success: function (response) { 
-                    $('.far').toggleClass('fas');
-                    $("#count_like-"+pk).html(response.like_count + "개");
-                },
-                error: function (request, status, error) { 
-                    window.location.replace("/home/")
-                },
-            });
-        })
-    </script>
-
-    
-    <button class="map_detail btn btn-light" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-        상세 위치
-    </button>
-    
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            <div class="col-md-12">
-        <div id="map"></div>
-    </div>
+        <div class="collapse" id="detail_map">
+            <div class="card card-body">
+                <div class="col-md-12">
+                    <div id="map"></div>
+                </div>
+            </div>
         </div>
     </div>
-    
 
     <div class="comment">
         {% include 'home/comment.html' %}
@@ -76,8 +55,30 @@
     
 </div>
 
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDksOeoLGmwSM2vTx8S92IORZi2X7iHeXw&callback=initMap"> </script>
+
+<script type="text/javascript">
+    $(".like").click(function () {
+        var pk = '{{ jujum.pk }}'
+        $.ajax({
+            type: "POST",
+            url: "{% url 'jujum:like' jujum.pk %}",
+            data: { 'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}' },
+            dataType: "json",
+
+            success: function (response) {
+                $('.far').toggleClass('fas');
+                $("#count_like-" + pk).html(response.like_count + "개");
+            },
+            error: function (request, status, error) {
+                window.location.replace("/home/")
+            },
+        });
+    })
+</script>
 
 <script>
     function initMap() {
