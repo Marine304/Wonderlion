@@ -124,8 +124,7 @@
     text-align: center;
     font-size: 3em;
     font-weight: 500;
-    font-family: 'dayright', 'Nanum Pen Script',
-    cursive;
+    font-family: 'dayright', 'Nanum Pen Script', cursive;
 
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -153,8 +152,7 @@
         text-align: center;
         font-size: 2em;
         font-weight: 500;
-        font-family: 'dayright', 'Nanum Pen Script',
-        cursive;
+        font-family: 'dayright', 'Nanum Pen Script', cursive;
         border-top: 2px solid black;
         border-bottom: 2px solid black;
     }
@@ -194,6 +192,11 @@
 
 .jujum_content > p {
     line-height: 30px;
+    font-family: 'dayright', 'Nanum Pen Script', cursive !important;
+}
+
+.nanjang_content > p {
+    font-family: 'dayright', 'Nanum Pen Script', cursive !important;
 }
 
 .nanjang_image, .nanjang_content, .jujum_image, .jujum_content {

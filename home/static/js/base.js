@@ -13,4 +13,11 @@ window.onload=function() {
     $(".navbar-collapse a").click(function() {
       $(".navbar-collapse").collapse("hide");
     });
+
+//    var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+
+//    if (/Mobi/.test(navigator.userAgent)) {
+//      $('.collapse').
+//    }
+
 }

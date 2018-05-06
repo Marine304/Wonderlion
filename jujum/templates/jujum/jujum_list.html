@@ -9,9 +9,9 @@
     <div class="list col-xs-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card list_margin margin_bottom">
             {% if jujum.image1 %}
-                <img class="card-img-top jujum-card" src="{{ jujum.image1.url }}">
+                <a href="{% url 'jujum:detail' jujum.pk %}"><img class="card-img-top jujum-card" src="{{ jujum.image1.url }}"></a>
             {% else %}
-                <img class="card-img-top jujum-card" src="/static/image/default.jpg">
+                <a href="{% url 'jujum:detail' jujum.pk %}"><img class="card-img-top jujum-card" src="/static/image/default.jpg"></a>
             {% endif %}
 
             <div class="card-body">
