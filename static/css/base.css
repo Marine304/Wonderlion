@@ -300,14 +300,6 @@
 
 /* about */
 
-.about-title {
-    margin: 30px auto;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    text-align: center;
-    font-family : 'dayright', 'Nanum Pen Script', 'Sunflower', sans-serif;
-}
-
 #about {
     width: 100%;
 }
