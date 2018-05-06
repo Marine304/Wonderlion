@@ -35,27 +35,25 @@
         
     </div>
 
-    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript">
-        $(".like").click(function () {
-            var pk = '{{ nanjang.pk }}';
-            $.ajax({
-                type: "POST",
-                url: "{% url 'nanjang:like' nanjang.pk %}",
-                data: { 'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}' },
-                dataType: "json",
-
-                success: function (response) {
-                    $('.far').toggleClass('fas');
-                    $("#count_like-" + pk).html(response.like_count + "개");
-                },
-                error: function (request, status, error) {
-                    window.location.replace("/home/")
-                },
-            });
-        })
-    </script>
-    
+    <div class="row">
+        {% if object.image1 %}
+        <div class="nanjang_image col-md-4">
+            <img src="{{ object.image1.url }}" class="img-fluid" alt="Responsive image">
+        </div>
+        {% endif %} 
+        
+        {% if object.image2 %}
+        <div class="nanjang_image col-md-4">
+            <img src="{{ object.image2.url }}" class="img-fluid" alt="Responsive image">
+        </div>
+        {% endif %} 
+        
+        {% if object.image3 %}
+        <div class="nanjang_image col-md-4">
+            <img src="{{ object.image3.url }}" class="img-fluid" alt="Responsive image">
+        </div>
+        {% endif %}
+    </div>
 
     <button class="map_detail btn btn-light" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
         상세위치
@@ -75,8 +73,29 @@
 </div>
 
 
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDksOeoLGmwSM2vTx8S92IORZi2X7iHeXw&callback=initMap"> </script>
+
+<script type="text/javascript">
+    $(".like").click(function () {
+        var pk = '{{ nanjang.pk }}';
+        $.ajax({
+            type: "POST",
+            url: "{% url 'nanjang:like' nanjang.pk %}",
+            data: { 'pk': pk, 'csrfmiddlewaretoken': '{{ csrf_token }}' },
+            dataType: "json",
+
+            success: function (response) {
+                $('.far').toggleClass('fas');
+                $("#count_like-" + pk).html(response.like_count + "개");
+            },
+            error: function (request, status, error) {
+                window.location.replace("/home/")
+            },
+        });
+    })
+</script>
 
 <script>
     function initMap() {

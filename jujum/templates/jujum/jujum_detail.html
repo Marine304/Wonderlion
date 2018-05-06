@@ -34,6 +34,26 @@
         </div>
     </div>
 
+    <div class="row">
+        {% if object.image1 %}
+            <div class="jujum_image col-md-4">
+                <img src="{{ object.image1.url }}" class="img-fluid" alt="Responsive image">
+            </div>
+        {% endif %}
+
+        {% if object.image2 %}
+            <div class="jujum_image col-md-4">
+                <img src="{{ object.image2.url }}" class="img-fluid" alt="Responsive image">
+            </div>
+        {% endif %}
+        
+        {% if object.image3 %}
+            <div class="jujum_image col-md-4">
+                <img src="{{ object.image3.url }}" class="img-fluid" alt="Responsive image">
+            </div>
+        {% endif %}
+    </div>
+
     <div class="col-md-12 detail_btn">
         <button class="map_detail btn btn-light" data-toggle="collapse" href="#detail_map" role="button" aria-expanded="false"
             aria-controls="detail_map">
