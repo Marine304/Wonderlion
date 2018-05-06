@@ -9,9 +9,9 @@ name = "pypi"
 
 django-extensions = "*"
 django-taggit = "*"
-pillow = "*"
-django = "*"
-werkzeug = "*"
+Pillow = "*"
+Django = "*"
+Werkzeug = "*"
 awsebcli = "*"
 django-summernote = "*"
 
