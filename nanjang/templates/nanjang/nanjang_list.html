@@ -12,10 +12,10 @@
     {% for nanjang in nanjang_list %}
     <div class="list col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card list_margin margin_bottom">
-            {% if nanjang.menu %}
-            <img class="card-img-top jujum-card" src="{{ nanjang.image1.url }}"> 
+            {% if nanjang.image1 %}
+                <img class="card-img-top jujum-card" src="{{ nanjang.image1.url }}"> 
             {% else %}
-            <img class="card-img-top jujum-card" src="/static/image/default.jpg"> 
+                <img class="card-img-top jujum-card" src="/static/image/default.jpg"> 
             {% endif %}
             <div class="card-body">
                 <h5 class="card-title">

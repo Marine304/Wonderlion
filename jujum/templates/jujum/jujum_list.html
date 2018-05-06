@@ -8,10 +8,10 @@
     {% for jujum in jujum_list %}
     <div class="list col-xs-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card list_margin margin_bottom">
-            {% if jujum.menu %}
-            <img class="card-img-top jujum-card" src="{{ jujum.image1.url }}">
+            {% if jujum.image1 %}
+                <img class="card-img-top jujum-card" src="{{ jujum.image1.url }}">
             {% else %}
-            <img class="card-img-top jujum-card" src="/static/image/default.jpg">
+                <img class="card-img-top jujum-card" src="/static/image/default.jpg">
             {% endif %}
 
             <div class="card-body">
