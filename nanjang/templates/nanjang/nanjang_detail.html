@@ -117,7 +117,7 @@
         var marker = new google.maps.Marker({
             position: wku,
             map: map,
-            label: '{{ object.title }}',
+            label: '{{ object.title | safe}}',
             title: "난장",
             icon: '/static/image/icon2.png'
         });
