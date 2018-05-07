@@ -5,7 +5,8 @@ import json
 
 class JujumListView(generic.ListView):
     model = Jujum
-    
+    ordering = ['-prority']
+
 class JujumDetailView(generic.DetailView):
     model = Jujum
 

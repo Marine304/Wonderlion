@@ -16,6 +16,11 @@ class Nanjang(models.Model):
     lat = models.DecimalField(max_digits=9, decimal_places=6, null=True)
     lng = models.DecimalField(max_digits=9, decimal_places=6, null=True)
     
+    priority = models.IntegerField(default=0, null=True, blank=True)
+
+    class Meta:
+        ordering = ["priority"]
+        
     def __str__(self):
         return self.title
 
